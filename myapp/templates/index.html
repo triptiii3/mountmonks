@@ -1,0 +1,694 @@
+{% include 'navigation.html'%}
+{% load static %}
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mount Monks</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Poppins:wght@400;500&display=swap"
+  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'index.css' %}">
+
+<link rel="stylesheet" href="{% static 'media-query.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
+
+
+  
+ <header>
+ 
+  
+</header>
+<a href="https://wa.me/919315121881" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+<div class="container-search">
+        
+  <form class="searchInputWrapper" method="get" action="/destination">
+    <input class="searchInput" type="text" name="destinationname" id="search" placeholder='Where do you wanna go?'>
+    <i class="searchInputIcon fa fa-search"></i>
+    </input>
+  </div>
+<section class="explore">
+  <div class="section-heading">Explore Mountmonks</div>
+ <div class="row">
+  
+  <a href="{% url 'spititours' %}" class="details2">
+    
+    <img src="{% static './images/spiti.png'%}" class="explore-icons">
+    <h2 class="explore-heads"> Spiti valley Tours</h2>
+    
+
+  </a>
+  <a href="{% url 'leh' %}" class="details2">
+    <img src="{% static './images/ladakh.png'%}" class="explore-icons">
+    <h2 class="explore-heads">Leh & Ladakh Tours </h2>
+    
+
+  </a>
+  <a href="{% url 'backpacktours' %}" class="details2">
+    <img src="{% static './images/backpack.png'%}" class="explore-icons">
+    <h2 class="explore-heads">Backpacking Tours</h2>
+    
+
+  </a>
+  <a href="{% url 'weekendtours' %}" class="details2 weekend">
+    <img src="{% static './images/weekend.png'%}" class="explore-icons">
+    <h2 class="explore-heads">Weekend Tours</h2>
+    
+
+  </a>
+  
+  
+ </div>
+</section>
+<section class="sliders">
+
+  <h1>Find out our Popular tours</h1><div class="slider-controls"><span class="prevSlide"><i class="fa fa-long-arrow-left"></i></span><span class="nextSlide"><i class="fa fa-long-arrow-right"></i></span></div>
+  <div class="slider-wrapper">
+    <ul class="item-slider">
+      <a class="panda" href="{% url 'leh'%}" >
+        <img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg"/><h4 class="bestseller">BestSeller</h4>
+        
+      <h2>Solang valley</h2>
+      
+    <h4 class="newprice"> From 8,000/-</h4></a>
+      
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-2.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-3.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-4.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-5.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      </ul>
+      
+  </div>
+ 
+
+</section>
+<section class="sliders2">
+
+  <h1>Weekend tours</h1><div class="slider-controls"><span class="prevSlide"><i class="fa fa-long-arrow-left"></i></span><span class="nextSlide"><i class="fa fa-long-arrow-right"></i></span></div>
+  <div class="slider-wrapper">
+    <ul class="item-slider">
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg"/>
+        
+      <h2>Solang valley</h2>
+      
+    <h4 class="newprice"> From 8,000/-</h4></a>
+      
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-2.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-3.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-4.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-5.jpg"/>
+        <h2>Solang valley</h2>
+      <h4 class="newprice"> From 8,000/-</h4></a>
+      </ul>
+      
+  </div>
+ 
+
+</section>
+<section class="boxes">
+  <div class="row">
+    <div class="details">
+      <img src="{% static './images/climbing.png'%}" class="detail-logos">
+      <h3 class="detail-heading"> 20 YEARS EXPERIENCES</h3>
+      <p class="detail-content">
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated.
+      </p>
+  
+    </div>
+    <div class="details">
+      <img src="{% static './images/knife.png'%}" class="detail-logos">
+      <h3 class="detail-heading"> LOTS OF GEARS</h3>
+      <p class="detail-content">
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated.
+      </p>
+  
+    </div>
+    <div class="details">
+      <img src="{% static './images/map.png'%}" class="detail-logos">
+      <h3 class="detail-heading"> MOST COMPLETED MAP</h3>
+      <p class="detail-content">
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated.
+      </p>
+  
+    </div>
+    <div class="details">
+      <img src="{% static './images/backpack.png'%}" class="detail-logos">
+      <h3 class="detail-heading"> PACKING ADVICE</h3>
+      <p class="detail-content">
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated.
+      </p>
+  
+    </div>
+  
+  </div>
+  
+  </section>
+  
+<section class="choose-us-page">
+    <div class="row">
+        
+        <div class=" chooseus">
+          <img src="{% static './images/binoculars.png'%}" class="binoculars">
+           <h2 class="chooseushead">
+          About us
+
+           </h2>
+           <p class="chooseuscontent">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Impedit ullam magni fugiat porro minima quaerat ab quibusdam doloribus unde odio nam nulla placeat error eius id earum non atque, 
+            illo rem iure veritatis inventore. Aliquid earum accusantium commodi labore eaque officiis ad suscipit recusandae eum,
+             magni voluptas in?<br> Aliquid voluptatum porro placeat repellendus nostrum molestias totam officiis consequatur reprehenderit 
+             a blanditiis sapiente modi ut eos, velit ex quisquam earum cumque impedit iusto neque officia magni rem eligendi.
+           </p>
+  <a href="{% url 'aboutus'%}" class="learnmore">Learn more <i class="fa fa-arrow-right arrow"></i></a>
+        </div> 
+      
+        <div class=" chooseusmount">
+            <img src="{% static './images/aboutus.png'%}" class="chooseusimg">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- counter -->
+
+
+
+	<div class="container">
+    	<div class="row" id="counter">
+        	<div class="col span_1_of_4 counter-Txt margin-bot-35">  
+                <span class="counter-value" data-count="2000">0</span> 
+                <h3 class="counter-title">Awesome Hikers</h3></div>
+            <div class="col span_1_of_4 counter-Txt">  <span class="counter-value" data-count="30">0</span> <h3 class="counter-title">Stunning places</h3></div>
+            <div class="col span_1_of_4 counter-Txt ">  <span class="counter-value" data-count="1000">0</span> <h3 class="counter-title">Miles to hike</h3></div>
+            <div class="col span_1_of_4 counter-Txt margin-bot-35">  <span class="counter-value" data-count="2500">0</span><h3 class="counter-title" >Days in service</h3</div>
+        </div>
+    </div>
+</div>
+<!-- reviews -->
+<section class="reviews">
+    <div class="section-heading2">
+        <h2> Reviews</h2>
+    </div>
+    <div class="testimonial">
+        <div class="container">
+         <div class="testimonial__inner">
+           <div class="testimonial-slider">
+             <div class="testimonial-slide">
+               <div class="testimonial_box">
+                 <div class="testimonial_box-inner">
+                   <div class="testimonial_box-top">
+                     <div class="testimonial_box-icon">
+                       <i class="fa fa-quote-right"></i>
+                     </div>
+                     <div class="testimonial_box-text">
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                     </div>
+                     
+                    <div class="testimonial_box-name">
+                      <h4>John Doe</h4>
+                   </div>
+                   <div class="testimonial_box-job">
+                     <p>MANAGER</p>
+                   </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="testimonial-slide">
+              <div class="testimonial_box">
+                <div class="testimonial_box-inner">
+                  <div class="testimonial_box-top">
+                    <div class="testimonial_box-icon">
+                      <i class="fa fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial_box-text">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                    </div>
+                    
+                   <div class="testimonial_box-name">
+                     <h4>John Doe</h4>
+                  </div>
+                  <div class="testimonial_box-job">
+                    <p>CEO</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial_box">
+                <div class="testimonial_box-inner">
+                  <div class="testimonial_box-top">
+                    <div class="testimonial_box-icon">
+                      <i class="fa fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial_box-text">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                    </div>
+                    
+                   <div class="testimonial_box-name">
+                     <h4>John Doe</h4>
+                  </div>
+                  <div class="testimonial_box-job">
+                    <p>Co-Founder</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial_box">
+                <div class="testimonial_box-inner">
+                  <div class="testimonial_box-top">
+                    <div class="testimonial_box-icon">
+                      <i class="fa fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial_box-text">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                    </div>
+                    
+                   <div class="testimonial_box-name">
+                     <h4>John Doe</h4>
+                  </div>
+                  <div class="testimonial_box-job">
+                    <p>SEO</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+         </div>
+        </div>
+      </div>
+</section>
+<!-- photogrids -->
+
+<section class="photos-section">
+    <div class="row1">
+        <div class="col1  ">
+            <img class="imageblock" src="{% static './images/1.png'%}">
+        </div>
+        <div class="col1 ">
+            <img class="imageblock" src="{% static './images/2.png'%}">
+        </div>
+        <div class="col1 ">
+            <img class="imageblock" src="{% static './images/3.png'%}">
+        </div>
+        <div class="col1 ">
+            <img class="imageblock" src="{% static './images/4.png'%}">
+        </div>
+        <div class="col1 ">
+            <img class="imageblock" src="{% static './images/5.png'%}">
+        </div>
+    </div></section>
+
+<!-- footer -->
+<footer class="footer theme-bg-primary wow fadeInLeft " id="foot">
+    <div class="container py-5 mb-3 col-md-offset-2">
+     <div class="row" style="margin-left: 20px">
+       <div class="footer-col col-lg-3 contact-info">
+         <h4 class="col-heading">CONTACT INFO
+         </h4>
+         <ul class="contacts">
+            <li class="call">
+                <a href="" class="phone">
+                    <i class="fa fa-phone fa icon"> </i>98111189090
+                  </a>
+               
+            </li>
+            <li class="email">
+                <a href="" class="mail">
+                    <i class="fa fa-envelope fa icon"> </i>mountmonks@gmail.com
+                  </a>
+               
+            </li>
+         </ul>
+         <ul class="social-list">
+           <li class="list-inline-item">
+             <a href="">
+               <i class="fa fa-instagram fa-2x icons"></i>
+             </a>
+   
+           </li>
+           <li class="list-inline-item" >
+             <a href="">
+               <i class="fa fa-twitter fa-2x icons"></i>
+             </a>
+   
+           </li>
+           <li class="list-inline-item">
+             <a href="">
+               <i class="fa fa-facebook fa-2x icons"></i>
+             </a>
+   
+           </li>
+   
+         </ul>
+   
+       </div>
+       <div class="footer-col col-lg-3">
+         <h4 class="col-heading">ABOUT US
+         </h4>
+         <ul>
+           <li class="links" >
+             <a href="" class="link-head">
+              Our Story
+             </a>
+   
+           </li>
+           <li class="links">
+             <a href="" class="link-head">
+              Travel Blogs
+             </a>
+   
+           </li>
+           <li class="links">
+             <a href="" class="link-head">
+               Working with us
+             </a>
+   
+           </li>
+           <li class="links">
+             <a href="" class="link-head">
+               Be our partner
+             </a>
+   
+           </li>
+          
+         </ul>
+   
+       </div>
+       
+       <div class="footer-col col-lg-3">
+         <h4 class="col-heading">SUPPORT
+         </h4>
+         <ul>
+           <li class="links">
+             <a href="" class="link-head">
+               Customer Support
+             </a>
+   
+           </li>
+           <li class="links">
+             <a href="" class="link-head">
+              Privacy & Policy
+             </a>
+   
+           </li>
+           <li class="links">
+             <a href="" class="link-head">
+               Contact Channels
+             </a>
+   
+           </li>
+          
+         </ul>
+   
+       </div>
+       <div class="footer-col col-lg-3">
+         <h4 class="col-heading">PAY SAFELY WITH US
+         </h4>
+         
+         <p class="about-us-para">
+            The payment is encrypted and transmitted securely with an SSL protocol
+         </p>
+         <img src="{% static './images/creditcard-logo.png'%}" class="footerlogo">
+   
+       </div>
+   
+     </div>
+
+   
+     </div>
+     
+
+     <div class="rights">
+    <h3 class="right"> All right reserved</h3>
+    </div>
+    
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script  src="{%static 'js/wow.min.js'%}"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>	
+  <script>
+    $(document).ready(function() {
+  // Toggle menu on click
+  $("#menu-toggler").click(function() {
+    toggleBodyClass("menu-active");
+  });
+
+  function toggleBodyClass(className) {
+    document.body.classList.toggle(className);
+  }
+
+ });
+ </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+   <script type="text/javascript">
+    const arrows = document.querySelectorAll(".arrow");
+    const container= document.querySelectorAll(".container");
+
+    arrows.forEach((arrow, i) => {
+        const ItemNo = container[i].querySelectorAll("img").length;
+        let clickitem = 0;
+        arrow.addEventListener("click", () => {
+            clickitem++;
+            if(ItemNo - (5 + clickitem) >= 0){
+                container[i].style.transform = `translateX(${
+                    container[i].computedStyleMap().get("transform")[0].x.value
+                    - 455}px)`;
+            }else{
+                container[i].style.transform = "translateX(0)";
+                clickitem = 0;
+            }
+        });
+    });
+</script>
+
+
+  
+ 
+      
+<script>
+  
+  $(document).ready(function(){
+   // Delay the action by 10000ms
+   setTimeout(function(){
+      // Display the div containing the class "bottomdiv"
+      $(".vertical").show();
+     
+   }, 2000);
+   setTimeout(function(){
+      // Display the div containing the class "bottomdiv"
+      $(".mount").show();
+     
+   }, 1000);
+   setTimeout(function(){
+      // Display the div containing the class "bottomdiv"
+      $(".monks").show();
+     
+   }, 1500);
+   setTimeout(function(){
+      // Display the div containing the class "bottomdiv"
+      $(".alltours").show();
+     
+   }, 2500);
+   
+});
+</script>
+<script>
+  $(document).ready(function(){
+  "use strict";
+  
+  //------- Initialising Slick Slider
+  $('.item-slider').slick({
+    autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 600,
+        arrows: false,
+        draggable: true,
+        infinite: true,
+   
+        slidesToShow: 4,
+        slidesToScroll: 1,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+  });
+  
+  //------- Custom Arrows click functionality
+  $(document).on('click', '.prevSlide', function(){
+    $('.item-slider').slick('slickPrev');
+  });
+  
+  $(document).on('click', '.nextSlide', function(){
+    $('.item-slider').slick('slickNext');
+  });
+  
+  //------- Click to filter slides according to user's choice
+  
+ 
+  
+});
+</script>
+<script>
+  let i=0;
+  let placeholder=""
+  const txt = 'Where do you wanna go?'
+  const speed=100;
+
+  function type(){
+    placeholder+=txt.charAt(i);
+    document.getElementById("search").setAttribute("placeholder",placeholder)
+    i++;
+  setTimeout(type,speed);
+          }        
+  type();
+</script>
+
+<script>
+
+   
+    $(document).ready(function() {
+    $('.testimonial-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 600,
+        draggable: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        responsive: [
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+}); 
+
+</script>
+<script>
+    var a = 0;
+$(window).scroll(function() {
+
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 3000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    a = 1;
+  }
+
+});
+</script>
+<script>
+  new WOW().init();
+  </script>
+</footer> 
+
+</div>
+

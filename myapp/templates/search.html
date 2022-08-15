@@ -1,0 +1,647 @@
+{% load static %}
+{% block title %} Search Results {% endblock title %}
+
+{% block body %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mount Monks</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Poppins:wght@400;500&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'destination.css' %}">
+
+<link rel="stylesheet" href="{% static 'media-query.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
+
+<header class="wow slideInDown">
+  <div class="row">
+    <div class="call-button">
+      <a href="" class="call">
+        <i class="fa fa-phone fa call-icon"> </i>98111189090
+      </a>
+    </div>
+    <div class="mail-button">
+      <a href="" class="email">
+        <i class="fa fa-envelope fa email-icon"> </i>mountmonks@gmail.com
+      </a>
+    </div>
+    <ul class="social">
+      <li class="social-icons">
+         <a href="">
+          <i class="fa fa-facebook  socialicon"></i>
+        </a>
+
+      </li>
+      <li class="social-icons" >
+        <a href="">
+          <i class="fa fa-twitter  socialicon"></i>
+        </a>
+
+      </li>
+      <li class="social-icons">
+       <a href="">
+          <i class="fa fa-instagram  socialicon"></i>
+        </a>
+
+      </li>
+
+    </ul>
+   
+      
+  
+    <nav class="navbar">
+
+      <div class="push-left ">
+        <button id="menu-toggler" data-class="menu-active" class="hamburger">
+          <span class="hamburger-line hamburger-line-top"></span>
+          <span class="hamburger-line hamburger-line-middle"></span>
+          <span class="hamburger-line hamburger-line-bottom"></span>
+        </button>
+    
+        <!--  Menu compatible with wp_nav_menu  -->
+        <ul id="primary-menu" class="menu nav-menu">
+          <li class="menu-item current-menu-item"><a class="nav__link"  href="{% url 'index'%}">Home</a></li>
+          <li class="menu-item dropdown"><a class="nav__link"  href="#">Tour List</a>
+             <ul class="sub-nav" >
+              <li><a class="sub-nav__link" href="#">link 1</a></li>
+              <li><a class="sub-nav__link" href="#">link 2</a></li>
+              <li><a class="sub-nav__link" href="#">link 3 - long link - long link - long link</a></li>
+            </ul>
+    
+          </li>
+          <div class="logo"><img class='mmlogo' src="{% static './images/logo2.png'%}" alt="LOGO"></div>
+          <li class="menu-item "><a class="nav__link"  href="{% url 'destination'%}">Destinations</a>
+            
+          </li>
+          <li class="menu-item "><a class="nav__link"  href="{% url 'blog'%}">Blogs</a>
+           
+          </li>
+        </ul>
+    
+    
+      </div>
+    </nav>
+      <h1 class="destination-head">Destinations</h1>
+      <h2 class="explore-dest">Explore tours by destinations</h2>
+      <div class="container-search">
+        
+        <form class="searchInputWrapper" method="get" action="/search">
+          <input class="searchInput" type="text" name="query" id="search" placeholder='Where do you wanna go?'>
+          <i class="searchInputIcon fa fa-search"></i>
+          </input>
+        </div>
+      </div>
+    </header><h1 class="label1">Recent tours</h1>
+    <section class="card-area">
+      
+
+        <!-- Card: City -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--city">
+                                
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--city">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6992dd6c1c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--city">
+                            For urban lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           As cities never sleep, there are always something going on, no matter what time!
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--city">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Ski -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--ski">
+                                
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--ski">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/195913085.sd.mp4?s=7c12f7a83de62a8900fd2ae049297070b9bc8a54&profile_id=164&oauth2_token_id=574477611" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--ski">
+                            For snow lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           Love snow? Why not take up exciting ski-in sessions and hit the slope? 
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--ski">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Beach -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--beach">
+                                
+                                          
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--beach">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/332588783.sd.mp4?s=cab1817146dd72daa6346a1583cc1ec4d9e677c7&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--beach">
+                            For sun lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           Relax and get sun-kissed tan in the sea or take up surfting for an adventure!
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--beach">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Camping -->
+        
+    </section><h1 class="label2">Weekend tours</h1>
+    <section class="card-area2">
+      
+
+        <!-- Card: City -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--city">
+                                
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--city">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6992dd6c1c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--city">
+                            For urban lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           As cities never sleep, there are always something going on, no matter what time!
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--city">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Ski -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--ski">
+                                
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--ski">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/195913085.sd.mp4?s=7c12f7a83de62a8900fd2ae049297070b9bc8a54&profile_id=164&oauth2_token_id=574477611" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--ski">
+                            For snow lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           Love snow? Why not take up exciting ski-in sessions and hit the slope? 
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--ski">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Beach -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--beach">
+                                
+                                          
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--beach">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/332588783.sd.mp4?s=cab1817146dd72daa6346a1583cc1ec4d9e677c7&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--beach">
+                            For sun lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           Relax and get sun-kissed tan in the sea or take up surfting for an adventure!
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--beach">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Camping -->
+        
+    </section><h1 class="label3">Upcoming tours</h1>
+    <section class="card-area3">
+      
+
+        <!-- Card: City -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--city">
+                                
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--city">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6992dd6c1c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--city">
+                            For urban lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           As cities never sleep, there are always something going on, no matter what time!
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--city">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Ski -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--ski">
+                                
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--ski">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/195913085.sd.mp4?s=7c12f7a83de62a8900fd2ae049297070b9bc8a54&profile_id=164&oauth2_token_id=574477611" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--ski">
+                            For snow lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           Love snow? Why not take up exciting ski-in sessions and hit the slope? 
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--ski">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Beach -->
+        <section class="card-section">
+            <div class="card">
+                <div class="flip-card">
+                    <div class="flip-card__container">
+                        <div class="card-front">
+                            <div class="card-front__tp card-front__tp--beach">
+                                
+                                          
+                            </div>
+
+                            <div class="card-front__bt">
+                                <p class="card-front__text-view card-front__text-view--beach">
+                                    Manali
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <video class="video__container" autoplay muted loop>
+                                <source class="video__media" src="https://player.vimeo.com/external/332588783.sd.mp4?s=cab1817146dd72daa6346a1583cc1ec4d9e677c7&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside-page">
+                    <div class="inside-page__container">
+                        <h3 class="inside-page__heading inside-page__heading--beach">
+                            For sun lovers
+                        </h3>
+                        <p class="inside-page__text">
+                           Relax and get sun-kissed tan in the sea or take up surfting for an adventure!
+                        </p>
+                        <a href="#" class="inside-page__btn inside-page__btn--beach">View deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card: Camping -->
+        
+    </section>
+    <footer class="footer theme-bg-primary wow fadeInLeft " id="foot">
+        <div class="container py-5 mb-3 col-md-offset-2">
+         <div class="row" style="margin-left: 20px">
+           <div class="footer-col col-lg-3 contact-info">
+             <h4 class="col-heading">CONTACT INFO
+             </h4>
+             <ul class="contacts">
+                <li class="call">
+                    <a href="" class="phone">
+                        <i class="fa fa-phone fa icon"> </i>98111189090
+                      </a>
+                   
+                </li>
+                <li class="email">
+                    <a href="" class="mail">
+                        <i class="fa fa-envelope fa icon"> </i>mountmonks@gmail.com
+                      </a>
+                   
+                </li>
+             </ul>
+             <ul class="social-list">
+               <li class="list-inline-item">
+                 <a href="">
+                   <i class="fa fa-instagram fa-2x icons"></i>
+                 </a>
+       
+               </li>
+               <li class="list-inline-item" >
+                 <a href="">
+                   <i class="fa fa-twitter fa-2x icons"></i>
+                 </a>
+       
+               </li>
+               <li class="list-inline-item">
+                 <a href="">
+                   <i class="fa fa-facebook fa-2x icons"></i>
+                 </a>
+       
+               </li>
+       
+             </ul>
+       
+           </div>
+           <div class="footer-col col-lg-3">
+             <h4 class="col-heading">ABOUT US
+             </h4>
+             <ul>
+               <li class="links" >
+                 <a href="" class="link-head">
+                  Our Story
+                 </a>
+       
+               </li>
+               <li class="links">
+                 <a href="" class="link-head">
+                  Travel Blogs
+                 </a>
+       
+               </li>
+               <li class="links">
+                 <a href="" class="link-head">
+                   Working with us
+                 </a>
+       
+               </li>
+               <li class="links">
+                 <a href="" class="link-head">
+                   Be our partner
+                 </a>
+       
+               </li>
+              
+             </ul>
+       
+           </div>
+           
+           <div class="footer-col col-lg-3">
+             <h4 class="col-heading">SUPPORT
+             </h4>
+             <ul>
+               <li class="links">
+                 <a href="" class="link-head">
+                   Customer Support
+                 </a>
+       
+               </li>
+               <li class="links">
+                 <a href="" class="link-head">
+                  Privacy & Policy
+                 </a>
+       
+               </li>
+               <li class="links">
+                 <a href="" class="link-head">
+                   Contact Channels
+                 </a>
+       
+               </li>
+              
+             </ul>
+       
+           </div>
+           <div class="footer-col col-lg-3">
+             <h4 class="col-heading">PAY SAFELY WITH US
+             </h4>
+             
+             <p class="about-us-para">
+                The payment is encrypted and transmitted securely with an SSL protocol
+             </p>
+             <img src="{% static './images/creditcard-logo.png'%}" class="footerlogo">
+       
+           </div>
+       
+         </div>
+       
+         </div><div class="rights">
+        <h3 class="right"> All right reserved</h3>
+        </div>
+        
+    </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script  src="{%static 'js/wow.min.js'%}"></script>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>	
+    
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script>
+        $(window).scroll(function(){
+        var scrl = $(window).scrollTop();
+        if(scrl < 80)
+            {
+                $('.navbar').removeClass('fixedbar');
+            }
+        else{
+            $('.navbar').addClass('fixedbar');
+        }
+        var scrl = $(window).scrollTop();
+        if(scrl < 80)
+            {
+                $('.push-left').removeClass('fixedbar');
+            }
+        else{
+            $('.push-left').addClass('fixedbar');
+        }
+        
+        var scrl = $(window).scrollTop();
+        if(scrl < 80)
+            {
+                $('.mmlogo').removeClass('fixedbar');
+            }
+        else{
+            $('.mmlogo').addClass('fixedbar');
+        }
+        
+        
+    });
+      </script>
+{% endblock %}
