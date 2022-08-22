@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('navigation', navigation ,name="navigation"),
+    path('checkout', checkout ,name="checkout"),
     path('itinerary', itinerary ,name="itinerary"),
     path('login', login ,name="login"),
     path('destination', destination ,name="destination"),
@@ -38,10 +39,25 @@ urlpatterns = [
     path('navigation', navigation ,name="navigation"),
     path('spititours', spititours ,name="spititours"),
     path('lehtours', lehtours ,name="lehtours"),
+    path('weekendtrip', weekendtrip ,name="weekendtrip"),
+    
     path('backpacktours', backpacktours ,name="backpacktours"),
-    path('weekendtours', weekendtours ,name="weekendtours"),
-    path('leh', leh ,name="leh"),
+    
+
+    path('destination/<int:id>', leh ,name="leh"),
+    
     path('aboutus', aboutus ,name="aboutus"),
+    path('roadtrips/<int:id>', roaditinerary ,name="roaditinerary"),
+    path('bikingtrips/<int:id>', biking ,name="biking"),
+    path('treks/<int:id>', treksitinerary ,name="treksitinerary"),
+    path('spititours/<int:id>', spitiitinerary ,name="spitiitinerary"),
+    path('lehtours/<int:id>', lehitinerary ,name="lehitinerary"),
+    path('backpacktours/<int:id>', backpackitinerary ,name="backpackitinerary"),
+    path('weekendtrip/<int:id>', weekendit ,name="weekendit"),
+    
+    
+
+
    
     
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

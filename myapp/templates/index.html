@@ -5,6 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mount Monks</title>
+<link rel="shortcut icon" type="image/png" href="{% static './images/favicon.ico' %}"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -54,9 +55,9 @@
     <i class="searchInputIcon fa fa-search"></i>
     </input>
   </div>
-<section class="explore">
-  <div class="section-heading">Explore Mountmonks</div>
- <div class="row">
+<section class="explore ">
+  <div class="section-heading ">Explore Mountmonks</div>
+ <div class="row ">
   
   <a href="{% url 'spititours' %}" class="details2">
     
@@ -65,19 +66,19 @@
     
 
   </a>
-  <a href="{% url 'leh' %}" class="details2">
+  <a href="{% url 'lehtours' %}" class="details2">
     <img src="{% static './images/ladakh.png'%}" class="explore-icons">
     <h2 class="explore-heads">Leh & Ladakh Tours </h2>
     
 
   </a>
-  <a href="{% url 'backpacktours' %}" class="details2">
+  <a href="{% url 'backpacktours' %}" class="details2 backpack">
     <img src="{% static './images/backpack.png'%}" class="explore-icons">
     <h2 class="explore-heads">Backpacking Tours</h2>
     
 
   </a>
-  <a href="{% url 'weekendtours' %}" class="details2 weekend">
+  <a href="{% url 'weekendtrip' %}" class="details2 weekend">
     <img src="{% static './images/weekend.png'%}" class="explore-icons">
     <h2 class="explore-heads">Weekend Tours</h2>
     
@@ -90,27 +91,17 @@
 <section class="sliders">
 
   <h1>Find out our Popular tours</h1><div class="slider-controls"><span class="prevSlide"><i class="fa fa-long-arrow-left"></i></span><span class="nextSlide"><i class="fa fa-long-arrow-right"></i></span></div>
+  
   <div class="slider-wrapper">
-    <ul class="item-slider">
-      <a class="panda" href="{% url 'leh'%}" >
-        <img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg"/><h4 class="bestseller">BestSeller</h4>
+    <ul class="item-slider">{% for n in populartoursData%}
+      <a class="panda" href="" >
+        <img src="{{n.destination_image.url}}"/><h4 class="bestseller">BestSeller</h4>
         
-      <h2>Solang valley</h2>
+      <h2> {{n.destination_title}}</h2>
       
-    <h4 class="newprice"> From 8,000/-</h4></a>
+    <h4 class="newprice"> From {{n.destination_price}}</h4></a>
+      {%endfor%}
       
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-2.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-3.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-4.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-5.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
       </ul>
       
   </div>
@@ -122,24 +113,16 @@
   <h1>Weekend tours</h1><div class="slider-controls"><span class="prevSlide"><i class="fa fa-long-arrow-left"></i></span><span class="nextSlide"><i class="fa fa-long-arrow-right"></i></span></div>
   <div class="slider-wrapper">
     <ul class="item-slider">
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg"/>
+      
+      
+      {% for n in recenttoursData%}
+      <a class="panda" href="" >
+        <img src="{{n.destination_image.url}}"/><h4 class="bestseller">BestSeller</h4>
         
-      <h2>Solang valley</h2>
+      <h2> {{n.destination_title}}</h2>
       
-    <h4 class="newprice"> From 8,000/-</h4></a>
-      
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-2.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-3.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-4.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
-      <a class="panda" href="{% url 'leh'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-5.jpg"/>
-        <h2>Solang valley</h2>
-      <h4 class="newprice"> From 8,000/-</h4></a>
+    <h4 class="newprice"> From {{n.destination_price}}</h4></a>
+      {%endfor%}
       </ul>
       
   </div>
@@ -219,11 +202,11 @@
 	<div class="container">
     	<div class="row" id="counter">
         	<div class="col span_1_of_4 counter-Txt margin-bot-35">  
-                <span class="counter-value" data-count="2000">0</span> 
+                <span class="counter-value" data-count="2000">0</span> <i class="fa fa-2x fa-plus " id="plus" aria-hidden="true"></i>
                 <h3 class="counter-title">Awesome Hikers</h3></div>
-            <div class="col span_1_of_4 counter-Txt">  <span class="counter-value" data-count="30">0</span> <h3 class="counter-title">Stunning places</h3></div>
-            <div class="col span_1_of_4 counter-Txt ">  <span class="counter-value" data-count="1000">0</span> <h3 class="counter-title">Miles to hike</h3></div>
-            <div class="col span_1_of_4 counter-Txt margin-bot-35">  <span class="counter-value" data-count="2500">0</span><h3 class="counter-title" >Days in service</h3</div>
+            <div class="col span_1_of_4 counter-Txt">  <span class="counter-value" data-count="30">0</span> <i class="fa fa-2x fa-plus " id="plus" aria-hidden="true"></i><h3 class="counter-title">Stunning places</h3></div>
+            <div class="col span_1_of_4 counter-Txt ">  <span class="counter-value" data-count="1000">0</span> <i class="fa fa-2x fa-plus "id="plus" aria-hidden="true"></i><h3 class="counter-title">Miles to hike</h3></div>
+            <div class="col span_1_of_4 counter-Txt margin-bot-35">  <span class="counter-value" data-count="2500">0</span><i class="fa fa-2x fa-plus " id="plus" aria-hidden="true"></i><h3 class="counter-title" >Days in service</h3</div>
         </div>
     </div>
 </div>
@@ -602,6 +585,7 @@
   
 });
 </script>
+
 <script>
   let i=0;
   let placeholder=""

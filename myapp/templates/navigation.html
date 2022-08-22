@@ -4,6 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mount Monks</title>
+<link rel="shortcut icon" type="image/png" href="{% static './images/favicon.ico' %}"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -195,4 +196,31 @@
     
     
 });
+  </script>
+  <script>
+    $("#hamburger").click(function(event) {
+        event.preventDefault();
+        $("#nav").addClass("showNav");
+        var winHeight = $(window).outerHeight();
+        // Set the window height of the mobile menu when engaged!
+        $('#menuWrapper').css('height',winHeight + 'px');
+      });
+  
+      $("#close").click(function(event) {
+        event.preventDefault();
+        $("#nav").removeClass("showNav");
+        // Set the window height of the mobile menu when not engaged!
+        $('#menuWrapper').css('height','auto');
+      });
+  
+  /* On hover apply a class to the dropdown '.hov' */
+    $('#menuWrapper ul li').hover( function () {
+      var el = $(this).children('ul');
+      // check if it has a class of .hov 
+      if (el.hasClass('hov')) {
+        $(el).removeClass('hov');
+      } else {
+        $(el).addClass('hov');
+      }
+    });
   </script>

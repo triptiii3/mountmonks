@@ -1,0 +1,168 @@
+@media only screen and (max-width:480px){
+    html,body{
+        font-size: 10px;
+
+    }
+    .destination-head{
+        position: relative;
+        top: 205px;
+        font-size: 35px;
+    }
+    .destination-head2{
+        position: relative;
+        top: 112px;
+        font-size: 35px;
+    }
+    .explore-dest{
+        top: 115px;
+        position: relative;
+    }
+ 
+    .card{
+        left: -428px;
+    }
+    .label1{
+        left: 13px;
+        font-size: 30px;
+    }
+    .contact-info{
+		margin-left: 36px;
+	}
+	.footer-col{
+		position: relative;
+		left: -37px;
+	}
+    .nodata{
+        position: relative;
+        font-size: 20px;
+        top: -161px;
+        left: 240px;
+    }
+    .footer{
+       position: relative;
+       top: 1890px;
+    }
+    .rights{
+        top: 14px;
+    }
+    .nav-link{
+		position: relative;
+		left: 100px;
+	}
+	
+	.call-button{
+		position: relative;
+		left: 18px;
+        
+    top: 22px;
+	}
+	.mail-button{
+		position: relative;
+        top: 7px;
+        left: 106px;
+	}
+	.social{
+		position: relative;
+        left: -53px;
+        top: -14px;
+    
+	}
+	.signup-button{
+		position: relative;
+		left: 33px;
+		top: -9px;
+	}
+	.navbar{
+		position: relative;
+		left: -50px;
+	}
+    #hamburger{
+        left: 434px;
+    }
+    #close{
+        left: 433px;
+    }
+    #nav #menuWrapper {
+        height: 300px;
+        overflow-y: auto;
+        left: -552px;
+        font-size: 15px;
+    }
+    #nav ul li {
+        display: block;
+        clear: both;
+        overflow: hidden;
+        width: 100%;
+        left: 197px;
+    }
+    .call-button{
+		position: relative;
+		left: 18px;
+        
+    top: 22px;
+	}
+	.mail-button{
+		position: relative;
+        top: 7px;
+        left: 106px;
+	}
+	.social{
+		position: relative;
+        left: -53px;
+        top: -14px;
+    
+
+	}
+    .secondnav{
+         position: relative;
+         left: -19px;
+    top: -249px;
+    }
+    .sidebar{
+        
+    left: 71px;
+    top: 2156px;
+
+    }
+    .book{
+        left: -133px;
+        top: -42px;
+    
+    }
+    .trip-overall{
+        top: -1385px;
+        left: -178px;
+    
+    }
+    .trip-details-photos{
+        width: 438px;
+    }
+    .detail-link,
+    .itinerary-link,
+    .reviews-link{
+        left: 20px;
+    }
+    .trip-overview,
+    .trip-details{
+        width: 400px;
+        font-size: 15px;
+    }
+    #main{
+        height: 234px;
+    }
+    .col3{
+        font-size: 15px;
+    }
+    .lists{
+        position: relative;
+        left: 150px;
+        font-size: 15px;
+    }
+    .expect{
+        font-size: 15px;
+    }
+    .accordion{
+        font-size: 15px;
+    }
+    
+}

@@ -572,6 +572,13 @@ bottom: 862px;
   
 
 }
+#plus{
+  height: 50px;
+  position: relative;
+  top: 25px;
+  left: 47px;
+  width: 50px;
+}
 .whatsapp_float {
 	position:fixed;
 	width:60px;

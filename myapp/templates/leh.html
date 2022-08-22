@@ -37,14 +37,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{% static 'leh.css' %}">
 
-<link rel="stylesheet" href="{% static 'media-query.css' %}">
+<link rel="stylesheet" href="{% static 'media-query3.css' %}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
 
-<header class=" wow slideInDown">
+<header class=" wow slideInDown">{% for n in destinationData%}
   
-  
+  <h1 class="destination-head">{{n.destination_title}}</h1>
     
 
 </header>
@@ -68,7 +68,7 @@
       {% csrf_token%}
       <div class="nav">
         <button class="btn " id="btns1" onclick="showLogin()">Booking Form</button>
-        <button class="btn " id="btns2" onclick="showSignup()">Enquiry Form</button>
+        
       </div>
       <div class="main">
         <div id="login" class="loginClass">
@@ -109,7 +109,7 @@
             <option value="audi">More than 10</option>
           </select>
           
-          <button class="subBtn" type="submit">Proceed Booking</button>
+          <a href="{% url 'checkout'%}" class="subBtn" type="submit" >Proceed Booking</a>
           
         </div>
         <!-- <form id="signUp" action="/itinerary" class="signupClass" method="post" >
@@ -138,30 +138,30 @@
     </h2>
     <div class="booking-dets">
       
-    <h4 class="mode">Traveller/Volvo</h4><h4 class="mode-price">Rs.11000</h4>
+    <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
     </div>
     <div class="booking-dets">
       
-       <h4 class="mode">Traveller/Volvo</h4><h4 class="mode-price">Rs.11000</h4>
+       <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
        </div>
        <div class="booking-dets">
       
-         <h4 class="mode">Traveller/Volvo</h4><h4 class="mode-price">Rs.11000</h4>
+         <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
          </div>
          <div class="booking-dets">
       
-           <h4 class="mode">Traveller/Volvo</h4><h4 class="mode-price">Rs.11000</h4>
+           <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
            </div>
            <div class="recenttours">
            <h2 class="booking-heading">
             Related Tours
            </h2>
-           <a class="panda" href="{% url 'itinerary'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg" class="related"/>
+           <a class="panda" href="./destination/{{n.id}}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg" class="related"/>
     
             <h2 class="heading">Solang valley</h2>
             
           <h4 class="newprice"> From 8,000/-</h4></a>
-          <a class="panda" href="{% url 'itinerary'%}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg" class="related"/>
+          <a class="panda" href="./{{n.id}}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg" class="related"/>
     
             <h2 class="heading">Solang valley</h2>
             
@@ -188,11 +188,11 @@
     </div>
 
      
-   </div>
+   </div>{%endfor%}
 
   </section>
   <section class="trip-overall">
-    {% for info in manalidata %}
+    {% for info in destinationData %}
     
     <div class="trip-details-photos" id="photos">
       

@@ -6,17 +6,26 @@ from django.shortcuts import render, HttpResponse
 
 
 from .models import saveEnquiry
-from destinations.models import destinations,Manali
+from destinations.models import destinations
 from django.contrib.auth.models import User
 from django.contrib import messages
-from home.models import Contact, bikingtours, roadtours , trekking, spititrip, lehtrip, backpacktrip, weekendtrip
+from home.models import Contact, bikingtours, roadtours , trekking, spiti, lehtrip, backpack, weekend, populartours , recenttours
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    populartoursData=populartours.objects.all()
+    recenttoursData=recenttours.objects.all()
+   
+    
+    data={
+        'populartoursData':populartoursData,'recenttoursData':recenttoursData
+    }
+    return render(request, 'index.html',data)
 def navigation(request):
     return render(request, 'navigation.html')
+def checkout(request):
+    return render(request, 'checkout.html')
 def contactus(request):
     
     if request.method=="POST":
@@ -68,6 +77,7 @@ def bikingtrips(request):
     return render(request, 'bikingtrips.html',data)
 def destination(request):
     destinationData=destinations.objects.all()
+    
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
@@ -79,6 +89,80 @@ def destination(request):
     
 
     return render(request, 'destination.html',data)
+def spititours(request):
+    spitiData=spiti.objects.all()
+    if request.method=="GET":
+        st=request.GET.get('destinationname')
+        if st!=None:
+            spitiData=spiti.objects.filter(destination_title__icontains= st)
+    
+    data={
+        'spitiData':spitiData
+    }
+    return render(request, 'spititours.html',data)
+def spitiitinerary(request,id):
+    
+    spitiData=spiti.objects.filter(id=id)
+    data={
+        'spitiData': spitiData
+    }
+    return render(request,'spitiitinerary.html',data)
+def lehtours(request):
+    lehtripData=lehtrip.objects.all()
+    if request.method=="GET":
+        st=request.GET.get('destinationname')
+        if st!=None:
+            lehtripData=lehtrip.objects.filter(destination_title__icontains= st)
+    
+    data={
+        'lehtripData':lehtripData
+    }
+    return render(request, 'lehtours.html',data)
+def lehitinerary(request,id):
+    
+    lehtripData=lehtrip.objects.filter(id=id)
+    data={
+        'lehtripData': lehtripData
+    }
+    return render(request,'lehitinerary.html',data)
+def backpacktours(request):
+    backpackData=backpack.objects.all()
+    if request.method=="GET":
+        st=request.GET.get('destinationname')
+        if st!=None:
+            backpackData=backpack.objects.filter(destination_title__icontains= st)
+    
+    data={
+        'backpackData':backpackData
+    }
+    return render(request, 'backpacktours.html',data)
+def backpackitinerary(request,id):
+    
+    backpackData=backpack.objects.filter(id=id)
+    data={
+        'backpackData': backpackData
+    }
+    return render(request,'backpackitinerary.html',data)
+
+def weekendtrip(request):
+    weekendData=weekend.objects.all()
+    if request.method=="GET":
+        st=request.GET.get('destinationname')
+        if st!=None:
+            weekendData=weekend.objects.filter(destination_title__icontains= st)
+    
+    data={
+        'weekendData':weekendData
+    }
+    return render(request, 'weekendtrip.html',data)
+def weekendit(request,id):
+    
+    weekendData=weekend.objects.filter(id=id)
+    data={
+        'weekendData': weekendData
+    }
+    return render(request,'weekendit.html',data)
+
 def openblog(request):
     
     return render(request, 'openblog.html')
@@ -103,59 +187,41 @@ def navigation(request):
 def aboutus(request):
    
     return render(request,'aboutus.html')
-def leh(request):
-    manalidata=Manali.objects.all()
+def leh(request,id):
+    
+    destinationData=destinations.objects.filter(id=id)
     data={
-        'manalidata': manalidata
+        'destinationData': destinationData
     }
     return render(request,'leh.html',data)
-def spititours(request):
-    spititripData=spititrip.objects.all()
-    if request.method=="GET":
-        st=request.GET.get('destinationname')
-        if st!=None:
-            spititripData=spititrip.objects.filter(destination_title__icontains= st)
+
+
+def roaditinerary(request,id):
     
+    roadtourData=roadtours.objects.filter(id=id)
     data={
-        spititripData:'spititripData'
+        'roadtourData': roadtourData
     }
+    return render(request,'roaditinerary.html',data)
+
+def treksitinerary(request,id):
+    
+    trekkingData=trekking.objects.filter(id=id)
+    data={
+        'trekkingData': trekkingData
+    }
+    return render(request,'treksitinerary.html',data)
+
+
    
-    return render(request,'spititours.html',data)
-def lehtours(request):
-    lehtripData=lehtrip.objects.all()
-    if request.method=="GET":
-        st=request.GET.get('destinationname')
-        if st!=None:
-            lehtripData=lehtrip.objects.filter(destination_title__icontains= st)
+def biking(request,id):
     
+    bikingtourData=bikingtours.objects.filter(id=id)
     data={
-        lehtripData:'lehtripData'
+        'bikingtourData': bikingtourData
     }
-   
-    return render(request,'lehtours.html',data)
-def backpacktours(request):
-    lehtripData=lehtrip.objects.all()
-    if request.method=="GET":
-        st=request.GET.get('destinationname')
-        if st!=None:
-            lehtripData=lehtrip.objects.filter(destination_title__icontains= st)
-    
-    data={
-        lehtripData:'lehtripData'
-    }
-   
-    return render(request,'backpacktours.html',data)
-def weekendtours(request):
-    weekendtripData=weekendtrip.objects.all()
-    if request.method=="GET":
-        st=request.GET.get('destinationname')
-        if st!=None:
-            weekendtripData=weekendtrip.objects.filter(destination_title__icontains= st)
-    
-    data={
-        weekendtripData:'weekendtripData'
-    }
-    return render(request,'weekendtours.html',data)
+    return render(request,'biking.html',data)
+
     
 def itinerary(request):
     

@@ -161,7 +161,7 @@ fieldset {
 	margin-top:16px;
 }
 /* for mobile */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 480px){
      .whatsapp-icon {
 	 margin-top:10px;
      }
@@ -172,4 +172,11 @@ fieldset {
         right: 10px;
         font-size: 22px;
     }
+	#nav.showNav #menuWrapper {
+		height: 300px;
+		overflow-y: auto;
+		left: -189px;
+		font-size: 15px;
+	}
+
 }

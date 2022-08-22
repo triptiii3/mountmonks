@@ -121,6 +121,37 @@
         top: -14px;
     
 	}
+    .nav-link{
+		position: relative;
+		left: 100px;
+	}
+	
+	.call-button{
+		position: relative;
+		left: 18px;
+        
+    top: 22px;
+	}
+	.mail-button{
+		position: relative;
+        top: 7px;
+        left: 106px;
+	}
+	.social{
+		position: relative;
+        left: -53px;
+        top: -14px;
+    
+	}
+	.signup-button{
+		position: relative;
+		left: 33px;
+		top: -9px;
+	}
+	.navbar{
+		position: relative;
+		left: -50px;
+	}
 	.signup-button{
 		position: relative;
         left: 16px;
@@ -243,4 +274,5 @@
           text-align: left;
         }
       }
+      
 }

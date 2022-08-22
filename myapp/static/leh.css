@@ -34,7 +34,7 @@ header{
     background: url(./images/header3.png) no-repeat center center;
     
     top: -162px;
-    height: 408px;
+    height: 413px;
     position: relative;
 
 }
@@ -213,7 +213,7 @@ footer{
 	margin-top:16px;
 }
 /* for mobile */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 480px){
      .whatsapp-icon {
 	 margin-top:10px;
      }
@@ -231,19 +231,7 @@ footer{
     padding: none;
     
 }
-*::-webkit-scrollbar {
-    width: 14px;
-  }
 
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #7a7a7a;
-    border-radius: 15px;
-    border: 3px solid #ffffff;
-  }
 body{
     overflow-x: hidden;
     background-color: #fff;
@@ -1200,10 +1188,11 @@ button{
     color: #6a6a6a;
 }
 .btn{
-   border-bottom: 1px solid #000;
-   font-size: 22px;
-   margin: 15px;
-   left: 18px;
+    
+    font-size: 30px;
+    margin: 15px;
+    left: 37px;
+
    font-family: 'League Spartan';
    /* background: #193555; */
    position: relative;
@@ -1411,7 +1400,8 @@ a{
     position: relative;
     top: 58px;
     left: 21px;
-    padding: 10px 10px;
+    font-size: 15px;
+    padding: 15px 44px;
     border-radius: 5px;
     height: 47px;
     width: 207px;
@@ -1481,11 +1471,16 @@ a{
     font-size: 15px;
     top: -17px;
     left: 50px;}
-
+.contactus h3{
+    position: relative;
+    top: -32px;
+    left: 23px;
+    font-size: 15px;
+}
 .contactus{
-    
+
         background: linear-gradient(#3975ba62,#1935558d), url(./images/bg14.jpg) no-repeat center center;
-       
+       color: #fff;
         width: 366px;
         /* border: 1px solid; */
         box-shadow: 0px 0px 6px rgb(0 0 0 / 25%);

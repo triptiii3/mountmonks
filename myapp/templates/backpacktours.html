@@ -30,12 +30,12 @@
     integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
-  /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{% static 'roadtrip.css' %}">
 
-<link rel="stylesheet" href="{% static 'media-query.css' %}">
+<link rel="stylesheet" href="{% static 'media-query3.css' %}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
@@ -45,15 +45,15 @@
   
   <div class="container-search">
         
-    <form class="searchInputWrapper" method="get" action="/backpacktours">
+    <form class="searchInputWrapper" method="get" action="/treks">
       <input class="searchInput" type="text" name="destinationname" id="search" placeholder='Where do you wanna go?'>
       <i class="searchInputIcon fa fa-search"></i>
       </input>
     </div>
 
-</header>
-  <a href="https://wa.me/919315121881" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
-<h1 class="label1">Search Results:</h1>{% for n in backpacktripData%}
+</header><a href="https://wa.me/919315121881" class="whatsapp_float" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+  
+<h1 class="label1">Search Results:</h1>{% for n in backpackData%}
 <section class="card-area">
 
 
@@ -74,7 +74,7 @@
                           </p>
                       </div>
                   </a>
-                  <a class="card-back" href="{% url 'itinerary'%}">
+                  <a class="card-back" href="./backpacktours/{{n.id}}">
                       <video class="video__container" autoplay muted loop>
                           <source class="video__media" src="{{n.inner_video}}">
                       </video>
