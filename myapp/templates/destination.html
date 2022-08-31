@@ -58,42 +58,32 @@
 
         <!-- Card: City -->
         <section class="card-section">
-            <div class="card" >
-                <div class="flip-card">
-                    <div class="flip-card__container">
-                        <a class="card-front">
-                            <div class="card-front__tp card-front__tp--city">
-                                
-                                <img src="{{n.destination_image.url}}" >
-                            </div>
-
-                            <div class="card-front__bt">
-                                <p class="card-front__text-view card-front__text-view--city">
-                                    {{n.destination_title}}
-                                </p>
-                            </div>
-                        </a>
-                        <a class="card-back" href="./destination/{{n.id}}">
-                            <video class="video__container" autoplay muted loop>
-                                <source class="video__media" src="{{n.inner_video}}">
-                            </video>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="inside-page">
-                    <div class="inside-page__container">
-                        <h3 class="inside-page__heading inside-page__heading--city">
-                           {{n.inner_title}}
-                        </h3>
-                        <p class="inside-page__text">
-                           {{n.inner_details}}
-                        </p>
-                        <a href="{{destinations.slug}}" class="inside-page__btn inside-page__btn--city">View deals</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <div class="card" >
+              <div class="flip-card">
+                  <div class="flip-card__container">
+                      <a class="card-front">
+                          <div class="card-front__tp card-front__tp--city">
+                              
+                              <img src="{{n.destination_image.url}}" >
+                          </div>
+    
+                          <div class="card-front__bt">
+                              <p class="card-front__text-view card-front__text-view--city" >
+                                  {{n.destination}}
+                              </p>
+                          </div>
+                      </a>
+                      <a class="card-back" href="./destination/{{n.id}}">
+                        
+                        <div class="back-image">
+                        <h1 class="learn-more">Learn More</h1></div>
+                      </a>
+                  </div>
+              </div>
+    
+              
+          </div>
+      </section>
         </section>
         {%empty%}
         <h2 class="nodata">No data found</h2>

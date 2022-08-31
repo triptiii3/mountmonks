@@ -892,6 +892,18 @@ footer{
     border: 1px solid #ccc;
     padding: 10px;
 }
+#quantity{
+    height: 49px;
+    width: 301px;
+    top: 15px;
+    position: relative;
+    left: 16px;
+    margin-top: 31px;
+    color: #ccc;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
 .btn{
     
     height: 50px;

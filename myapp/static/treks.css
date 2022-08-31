@@ -604,6 +604,10 @@ fieldset {
   font-size: 1.2rem;
   text-align: center;
 }
+.back-image{
+  height: 40rem;
+  width: 33rem;
+}
 footer{
   background-color: #303030;
  

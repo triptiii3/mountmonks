@@ -491,7 +491,7 @@ a:hover{
 .checkout{
     background: linear-gradient(rgba(255, 255, 255, 0.236),rgba(255, 255, 255, 0.707)), url(./images/testimonial-bg-1.jpg);
     background-size:cover ;
-    height: 660px;
+    height: 903px;
     border-radius: 5px;
     width: 366px;
     /* border: 1px solid; */
@@ -1071,7 +1071,7 @@ footer{
     box-shadow: 0px 0px 6px rgb(0 0 0 / 25%);
     z-index: 1;
     position: relative;
-    top: 623px;
+    top: 844px;
    
     float: right;
     right: -237px;
@@ -1187,6 +1187,7 @@ button{
     top: 10px;
     color: #6a6a6a;
 }
+
 .btn{
     
     font-size: 30px;
@@ -1240,6 +1241,17 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     margin-bottom: 10px;
     top: 30px;
     left: -67px;
+}
+.label-heads{
+    font-family: 'Poppins';
+    font-size: 17px;
+    color: #000;
+    text-align: left;
+    font-weight: 200;
+    position: relative;
+    margin-bottom: 10px;
+    top: 37px;
+    left: -55px;
 }
 .label-heads2{
     font-family: 'Poppins';
@@ -1353,6 +1365,18 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     left: -24px;
     top: 34px;
 }
+.label-heads5{
+    font-family: 'Poppins';
+    font-size: 17px;
+    color: #000;
+    text-align: left;
+    font-weight: 200;
+    position: relative;
+   
+    left: -54px;
+    top: 34px;
+    margin-bottom: 16px;
+}
 #calendar2{
     width: 300px;
     height: 50px;
@@ -1401,7 +1425,7 @@ a{
     top: 58px;
     left: 21px;
     font-size: 15px;
-    padding: 15px 44px;
+    padding: -1px 44px;
     border-radius: 5px;
     height: 47px;
     width: 207px;
@@ -1429,7 +1453,7 @@ a{
     font-family: 'Poppins';
     font-size: 25px;
     padding: 32px 20px;
-    top: 5px;
+    top: -11px;
 }
 .booking-icon{
     font-size: 15px;
@@ -1442,15 +1466,38 @@ a{
 .booking-dets{
     width: 366px;
     position: relative;
-      top: -5px;
+      top: -54px;
       display: inline-block;
 
   
     border-bottom: 1px solid #ccc;
   
 }
+.simple-gallery {
+    width: 408px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 5px 20px 60px 10px Gray;
+  }
+  #mainImage {
+    height: 500px;
+    width: 712px;
+    margin-bottom: 30px;
+    /* margin: 60px; */
+    border-radius: 9px;
+}
+
+.imgStyle {
+    height: 100px;
+    width: 100px;
+    margin: 8px;
+    border-radius: 10px;
+}  
 .related{
     border-radius: 10px;
+    height: 360px;
+    width: 360px;
 }
 .heading{
 
@@ -1501,6 +1548,7 @@ a{
     margin-left: 20px;
     margin-top: 30px;
 }
+
 .contactus p{
     font-family: 'Montserrat';
     color: #fff;

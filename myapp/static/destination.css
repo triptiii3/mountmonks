@@ -11,13 +11,16 @@
     left: 109px;
     top: 78px;
 }
-
+.back-image{
+  height: 40rem;
+  width: 33rem;
+}
 header{
     background: url(./images/header3.png) no-repeat center center;
     
 
-    height: 291px;
-    top: -69px;
+    height: 394px;
+    top: -139px;
     position: relative;
 }
 .destination-head2{
@@ -26,7 +29,7 @@ header{
     font-family: 'Poppins';
     align-items: center;
     text-align: center;
-    top: 6px;
+    top: 158px;
     color: #373737;
 }
 .explore-dest{
@@ -34,7 +37,7 @@ header{
     position: relative;
     align-items: center;
     text-align: center;
-    top: 11px;
+    top: 158px;
     font-weight: 200;
     color: #373737;
     font-family: 'Poppins';
@@ -83,8 +86,23 @@ margin-bottom: 0px;
     height: 100px;
 
 }
+.back-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.216),rgba(0, 0, 0, 0.134)),url(./images/backimg.jpg);
+  background-size: cover;
+  height: 40rem;
+  width: 33rem;
+  position: relative;
+  top: -21px;
+}
+.learn-more{
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  top: 194px;
+  left: 120px;
+}
 .container-search {
-  height: 17vh;
+  height: 58vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -14,18 +14,52 @@ from home.models import Contact, bikingtours, roadtours , trekking, spiti, lehtr
 # Create your views here.
 
 def index(request):
+    
+        
+        
     populartoursData=populartours.objects.all()
     recenttoursData=recenttours.objects.all()
    
     
     data={
-        'populartoursData':populartoursData,'recenttoursData':recenttoursData
+        'recenttoursData':recenttoursData, 'populartoursData':populartoursData
     }
     return render(request, 'index.html',data)
+def recentit(request,id):
+    
+    recenttoursData=recenttours.objects.filter(id=id)
+    data={
+        'recenttoursData':recenttoursData
+    }
+    return render(request,'recentit.html',data)
 def navigation(request):
     return render(request, 'navigation.html')
+def travelmodes(request):
+    name=request.GET.get('name')
+    email=request.GET.get('email')
+    people=request.GET.get('people')
+    mode=request.GET.get('mode')
+    batch=request.GET.get('batch')
+   
+    
+                
+    
+    return render(request, 'travelmodes.html',{'name':name,'email':email,'people':people,'mode':mode,'batch':batch})
 def checkout(request):
-    return render(request, 'checkout.html')
+    roadtourData=roadtours.objects.all()
+    name=request.GET.get('name')
+    email=request.GET.get('email')
+    people=request.GET.get('people')
+    mode=request.GET.get('mode')
+    batch=request.GET.get('batch')
+    destination=request.GET.get('destination')
+    
+    data={
+        'roadtourData':roadtourData,'name':name,'email':email,'people':people,'mode':mode,'batch':batch,'destination':destination
+    }
+   
+    
+    return render(request, 'checkout.html',data)
 def contactus(request):
     
     if request.method=="POST":
@@ -46,7 +80,7 @@ def roadtrips(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            roadtourData=roadtours.objects.filter(destination_title__icontains= st)
+            roadtourData=roadtours.objects.filter(destination__icontains= st)
     
     data={
         'roadtourData':roadtourData
@@ -58,7 +92,7 @@ def treks(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            trekkingData=trekking.objects.filter(destination_title__icontains= st)
+            trekkingData=trekking.objects.filter(destination__icontains= st)
     
     data={
         'trekkingData':trekkingData
@@ -69,7 +103,7 @@ def bikingtrips(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            bikingtourData=bikingtours.objects.filter(destination_title__icontains= st)
+            bikingtourData=bikingtours.objects.filter(destination__icontains= st)
     
     data={
         'bikingtourData':bikingtourData
@@ -81,7 +115,7 @@ def destination(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            destinationData=destinations.objects.filter(destination_title__icontains= st)
+            destinationData=destinations.objects.filter(destination__icontains= st)
     
     data={
         'destinationData':destinationData
@@ -94,7 +128,7 @@ def spititours(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            spitiData=spiti.objects.filter(destination_title__icontains= st)
+            spitiData=spiti.objects.filter(destination__icontains= st)
     
     data={
         'spitiData':spitiData
@@ -112,7 +146,7 @@ def lehtours(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            lehtripData=lehtrip.objects.filter(destination_title__icontains= st)
+            lehtripData=lehtrip.objects.filter(destination__icontains= st)
     
     data={
         'lehtripData':lehtripData
@@ -130,7 +164,7 @@ def backpacktours(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            backpackData=backpack.objects.filter(destination_title__icontains= st)
+            backpackData=backpack.objects.filter(destination__icontains= st)
     
     data={
         'backpackData':backpackData
@@ -149,7 +183,7 @@ def weekendtrip(request):
     if request.method=="GET":
         st=request.GET.get('destinationname')
         if st!=None:
-            weekendData=weekend.objects.filter(destination_title__icontains= st)
+            weekendData=weekend.objects.filter(destination__icontains= st)
     
     data={
         'weekendData':weekendData
@@ -187,13 +221,13 @@ def navigation(request):
 def aboutus(request):
    
     return render(request,'aboutus.html')
-def leh(request,id):
+def destinationit(request,id):
     
     destinationData=destinations.objects.filter(id=id)
     data={
         'destinationData': destinationData
     }
-    return render(request,'leh.html',data)
+    return render(request,'destinationit.html',data)
 
 
 def roaditinerary(request,id):

@@ -2,8 +2,8 @@ header{
    
     background: url(./images/header3.png) no-repeat center center;
     
-    top: -162px;
-    height: 222px;
+    top: -142px;
+    height: 309px;
     position: relative;
 
 }
@@ -56,10 +56,12 @@ body{
   }
   
   .container {
-    background-color: #f2f2f2;
+
     padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
+  
     border-radius: 3px;
+    top: -84px;
+    position: relative;
   }
   
   input[type=text] {
@@ -99,9 +101,58 @@ body{
   
   span.price {
     float: right;
-    color: grey;
+    color: #000;
+    position: relative;
+   
+    font-family: 'Montserrat';
+    position: relative;
   }
   
+  #firstNumber{
+    
+    font-size: 18px;
+  }
+  .price{
+    top: -224px;
+    font-size: 30px;
+    left: 982px;
+    position: relative;
+  }
+  .people{
+    position: relative;
+    top: -27px;
+  }
+  .batch{
+    position: relative;
+    top: -19px;
+    left: -22px;
+  }
+  .mode{
+   
+    left: 293px;
+    top: -202px;
+position: relative;
+    font-size: 18px;
+    
+  }
+  .details{
+    position: relative;
+    top: -50px;
+  }
+  
+  #secondnumber{
+    top: -203px;
+    left: -785px;
+    font-size: 18px;
+  }
+  #batch{
+    top: -204px;
+    left: -727px;
+    font-size: 18px;
+  }
+  hr{
+    margin-top: -127px;
+  }
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
   @media (max-width: 800px) {
     .row {

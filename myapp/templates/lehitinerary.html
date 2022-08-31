@@ -42,7 +42,7 @@
 
 <header class=" wow slideInDown">{% for n in lehtripData%}
   
-  <h1 class="destination-head">{{n.destination_title}}</h1>
+  <h1 class="destination-head">{{n.destination}}</h1>
     
 
 </header>
@@ -56,151 +56,125 @@
     </ul>
 
   </div>
-<section class="sidebar">
+  <section class="sidebar">
     
-  <div class="checkout">
-   
-   <div class="content">
-    <div class="container2">
-      {% csrf_token%}
-      <div class="nav">
-        <button class="btn " id="btns1" onclick="showLogin()">Booking Form</button>
-        
-      </div>
-      <div class="main">
-        <div id="login" class="loginClass">
+    <div class="checkout">
+     
+     <div class="content">
+      <div class="container2">
+        {% csrf_token%}
+        <div class="nav">
+          <h1 class="btn " id="btns1" onclick="showLogin()">Booking Form</h1>
+          
+        </div>
+        <form id="login" class="loginClass" action="{% url 'checkout' %}" >
+          <label class="label-heads">Destination Name</label>
+          <select name="destination" id="cars" class="selectpicker" >
+            <option value="{{n.destination}}" >{{n.destination}}</option>
+            </select>
           <label class="label-heads1">Enter full name</label>
-          <input type="text" id="fullname" placeholder="Full Name" name="name"required><br>
+          <input type="text" id="fullname" placeholder="Full Name" name="name" value="{{name}}" required><br>
           <label class="label-heads2">Enter email address</label>
-          <input type="email" id="email" placeholder="Email Address" name="email" required><br>
+          <input type="email" id="email" placeholder="Email Address" name="email" value="{{email}}" required><br>
           <label class="label-heads3">Choose your batch</label>
-          <select name="cars" id="cars" >
-            <option value="volvo">Upcoming Batches</option>
-            <option value="saab">1</option>
-            <option value="mercedes">2</option>
-            <option value="audi">3</option>
-            <option value="audi">4</option>
-            <option value="audi">5</option>
-            <option value="audi">6</option>
-            <option value="audi">7</option>
-            <option value="audi">8</option>
-            <option value="audi">9</option>
-            <option value="audi">10</option>
-            <option value="audi">More than 10</option>
+          <select name="batch" id="cars" class="selectpicker" >
+            <option value="{{n.batch1}}" >{{n.batch1}}</option>
+            <option value="{{n.batch2}}" >{{n.batch2}}</option>
+            <option value="{{n.batch3}}" >{{n.batch3}}</option>
+            <option value="{{n.batch4}}" >{{n.batch4}}</option>
+            <option value="{{n.batch5}}" >{{n.batch5}}</option>
+            <option value="{{n.batch6}}" >{{n.batch6}}</option>
           </select>
           
          
           <label class="label-heads4">Choose your travel mode</label>
-          <select name="cars" id="cars">
-            <option value="volvo">Travel Mode</option>
-            <option value="saab">1</option>
-            <option value="mercedes">2</option>
-            <option value="audi">3</option>
-            <option value="audi">4</option>
-            <option value="audi">5</option>
-            <option value="audi">6</option>
-            <option value="audi">7</option>
-            <option value="audi">8</option>
-            <option value="audi">9</option>
-            <option value="audi">10</option>
-            <option value="audi">More than 10</option>
+          <select name="mode" id="cars" class="selectpicker" >
+            <option value={{n.mode1_price}} >{{n.mode1}}</option>
+            <option value={{n.mode2_price}}>{{n.mode2}}</option>
+            <option value={{n.mode1_price}}>{{n.mode3}}</option>
+            <option value={{n.mode4_price}}>{{n.mode4}}</option>
           </select>
+          <label class="label-heads5">Number of people</label>
+          <input type="text" id="quantity" placeholder="People" name="people" value="{{people}}" required><br>
           
-          <a href="{% url 'checkout'%}" class="subBtn" type="submit" >Proceed Booking</a>
+          <button  class="subBtn cart" id="pr{{n.id}}" type="submit" >Proceed Booking</button>
           
-        </div>
-        <!-- <form id="signUp" action="/itinerary" class="signupClass" method="post" >
-          {% csrf_token %}
-          <label class="label-heads1">Enter full name</label>
-          <input type="text" id="fullname" placeholder="Full Name" name="name"required><br>
-          <label class="label-heads2">Enter email address</label>
-          <input type="email" id="email" placeholder="Email Address" name="email" required><br>
-          <label class="label-heads3">Enter phone number</label>
-          <input type="text" id="fullname" placeholder="Phone Number" name="name"required><br>
-          <label class="label-heads4">Enter your message</label>
-          <textarea type="email" id="email" placeholder="Type your message here" name="email" required><br>
-         
-          <button class="submit" type="submit">Submit</button><br>
-          
-        </form> -->
-        
+        </form>
       </div>
+     </div>
+     
     </div>
-   </div>
-   
-  </div>
-  <div class="book">
-    <h2 class="booking-heading">
-     Travel modes
-    </h2>
-    <div class="booking-dets">
-      
-    <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
-    </div>
-    <div class="booking-dets">
-      
-       <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
-       </div>
-       <div class="booking-dets">
-      
-         <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
+    <div class="book">
+      <h2 class="booking-heading">
+       Travel modes
+      </h2>
+      <div class="booking-dets">
+        
+      <h4 class="mode">{{n.mode1}}</h4><h4 class="mode-price">{{n.mode1_price}}</h4>
+      </div>
+      <div class="booking-dets">
+        
+         <h4 class="mode">{{n.mode2}}</h4><h4 class="mode-price">{{n.mode2_price}}</h4>
          </div>
          <div class="booking-dets">
-      
-           <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
+        
+           <h4 class="mode">{{n.mode3}}</h4><h4 class="mode-price">{{n.mode3_price}}</h4>
            </div>
-           <div class="recenttours">
-           <h2 class="booking-heading">
-            Related Tours
-           </h2>
-           <a class="panda" href="./destination/{{n.id}}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg" class="related"/>
-    
-            <h2 class="heading">Solang valley</h2>
-            
-          <h4 class="newprice"> From 8,000/-</h4></a>
-          <a class="panda" href="./{{n.id}}"><img src="https://webtechball.files.wordpress.com/2017/11/img-1.jpg" class="related"/>
-    
-            <h2 class="heading">Solang valley</h2>
-            
-          <h4 class="newprice"> From 8,000/-</h4></a></div>
-          <div class="columns comments">
-            <span class="title"> Reviews <a href="#" title="Explore More"></a></span>
-            <section>
-            <marquee direction="up" scrollamount="4" onMouseOver="this.stop()" onMouseOut="this.start()" class="marquee2">
-            <p>Remember, torn clothes should not be left at home. Dispose of them out. Buying new clothes like towels.</p> 
-            <p>wearing clothes, bedsheets are like inviting good luck to the home.</p>
-            <p>Arrange doormats before every door and please change the doormats once in spiti or maximum within 1 year. For More Daily</p>
-            </marquee>
-            </section>
-            </div>
-       <div class="contactus">
-    <h2 class="contactus-heading">
-      Got a question?
-    </h2>
-    <p>Do not hesitage to give us a call. We are an expert team and we are happy to talk to you.</p>
-    <i class="fa fa-phone callbtn" aria-hidden="true"></i>
-      <h3>989898989</h3>
-      <i class="fa fa-envelope callbtn" aria-hidden="true"></i>
-        <h3>mountmonks@gmail.com</h3>
-    </div>
-
-     
-   </div>{%endfor%}
-
-  </section>
+           <div class="booking-dets">
+        
+             <h4 class="mode">{{n.mode4|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode4_price|default_if_none:""}}</h4>
+             </div>
+             <div class="booking-dets">
+        
+              <h4 class="mode">{{n.mode5|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode5_price|default_if_none:""}}</h4>
+              </div>
+             
+              <div class="recenttours">
+                <h2 class="booking-heading">
+                 Related Tours
+                </h2>
+                <a class="panda" href="{{n.relatedit1.url}}"><img src="{{n.reltourimg1.url}}" class="related"/>
+         
+                 <h2 class="heading">{{n.relatedtour1}}</h2>
+                 
+               <h4 class="newprice">{{n.relatedprice1}}</h4></a>
+               <a class="panda" href="{{n.relatedit2.url}}"><img src="{{n.reltourimg2.url}}" class="related"/>
+         
+                 <h2 class="heading">{{n.relatedtour2}}</h2>
+                 
+               <h4 class="newprice">{{n.relatedprice2}}</h4></a></div>
+         <div class="contactus">
+      <h2 class="contactus-heading">
+        Got a question?
+      </h2>
+      <p>Do not hesitage to give us a call. We are an expert team and we are happy to talk to you.</p>
+      <i class="fa fa-phone callbtn" aria-hidden="true"></i>
+        <h3>989898989</h3>
+        <i class="fa fa-envelope callbtn" aria-hidden="true"></i>
+          <h3>mountmonks@gmail.com</h3>
+      </div>
+  
+       
+     </div>{%endfor%}
+  
+    </section>
   <section class="trip-overall">
     {% for info in lehtripData %}
     
     <div class="trip-details-photos" id="photos">
       
-      <img src="{{info.main_image.url}}" id="main">
-  <div id="thumbnails">
-    <img src="{{info.destination_image1.url}}">
-    <img src="{{info.destination_image2.url}}">
-    <img src="{{info.destination_image3.url}}">
-    <img src="{{info.destination_image4.url}}">
-    <img src="{{info.destination_image5.url}}">
-    <img src="{{info.destination_image6.url}}">
+      <img src="{{info.main_image.url}}" alt="main Image" id="mainImage" alt="">
+            <div id="imageDiv" onclick="changeImage(event)">
+              <img src="{{info.destination_image1.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{info.destination_image2.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{info.destination_image3.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{info.destination_image4.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{info.destination_image5.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{info.destination_image6.url}}" class="imgStyle" alt="destinationimages">
+            </div>
+    
+      
+      
   </div>
 </div> 
   <div class="trip-basics" id="detail">
@@ -534,4 +508,27 @@ function showLogin(){
     document.getElementById("btns1").style.color = "#000";
     document.getElementById("btns2").style.color = "#ccc";
 }
+</script>
+<script>
+  var images = document.getElementById("imageDiv").getElementsByTagName("img"); /*This variable holds all the thumbnail images*/
+            for (var i = 0; i < images.length; i++) {
+                images[i].onmouseover = function() {
+                    this.style.cursor = 'hand'; /*The cursor changes to hand when an image is hovered*/
+                   /*The border color changes to red when an image is hovered*/
+                }
+
+                images[i].onmouseout = function() {
+                    this.style.cursor = 'pointer'; /*The comes becomes a pointer when the image is no longer hovered*/
+                   
+                }
+            }
+
+            function changeImage(event) {
+                event = event || window.event;
+                var targetElement = event.target || event.srcElement;
+
+                if(targetElement.tagName == "IMG") {
+                    document.getElementById("mainImage").src = targetElement.getAttribute("src");
+                }
+            }
 </script>

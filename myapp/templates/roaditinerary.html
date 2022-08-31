@@ -44,7 +44,7 @@
 
 <header class=" wow slideInDown">{% for n in roadtourData%}
   
-  <h1 class="destination-head">{{n.destination_title}}</h1>
+  <h1 name="destination_title" id="destination_title" class="destination-head">{{n.destination}}</h1>
     
 
 </header>
@@ -71,47 +71,35 @@
         
       </div>
       <div class="main">
-        <div id="login" class="loginClass">
+        <form id="login" class="loginClass" action="{% url 'checkout' %}" >
           <label class="label-heads1">Enter full name</label>
-          <input type="text" id="fullname" placeholder="Full Name" name="name"required><br>
+          <input type="text" id="fullname" placeholder="Full Name" name="name" value="{{name}}" required><br>
           <label class="label-heads2">Enter email address</label>
-          <input type="email" id="email" placeholder="Email Address" name="email" required><br>
+          <input type="email" id="email" placeholder="Email Address" name="email" value="{{email}}" required><br>
           <label class="label-heads3">Choose your batch</label>
-          <select name="cars" id="cars" >
-            <option value="volvo">Upcoming Batches</option>
-            <option value="saab">1</option>
-            <option value="mercedes">2</option>
-            <option value="audi">3</option>
-            <option value="audi">4</option>
-            <option value="audi">5</option>
-            <option value="audi">6</option>
-            <option value="audi">7</option>
-            <option value="audi">8</option>
-            <option value="audi">9</option>
-            <option value="audi">10</option>
-            <option value="audi">More than 10</option>
+          <select name="batch" id="cars" class="selectpicker" >
+            <option value="{{n.batch1}}" >{{n.batch1}}</option>
+            <option value="{{n.batch2}}" >{{n.batch2}}</option>
+            <option value="{{n.batch3}}" >{{n.batch3}}</option>
+            <option value="{{n.batch4}}" >{{n.batch4}}</option>
+            <option value="{{n.batch5}}" >{{n.batch5}}</option>
+            <option value="{{n.batch6}}" >{{n.batch6}}</option>
           </select>
           
          
           <label class="label-heads4">Choose your travel mode</label>
-          <select name="cars" id="cars">
-            <option value="volvo">Travel Mode</option>
-            <option value="saab">1</option>
-            <option value="mercedes">2</option>
-            <option value="audi">3</option>
-            <option value="audi">4</option>
-            <option value="audi">5</option>
-            <option value="audi">6</option>
-            <option value="audi">7</option>
-            <option value="audi">8</option>
-            <option value="audi">9</option>
-            <option value="audi">10</option>
-            <option value="audi">More than 10</option>
+          <select name="mode" id="cars" class="selectpicker" >
+            <option value={{n.mode1_price}} >{{n.mode1}}</option>
+            <option value={{n.mode2_price}}>{{n.mode2}}</option>
+            <option value={{n.mode1_price}}>{{n.mode3}}</option>
+            <option value={{n.mode4_price}}>{{n.mode4}}</option>
           </select>
+          <label class="label-heads5">Number of people</label>
+          <input type="text" id="quantity" placeholder="People" name="people" value="{{people}}" required><br>
           
-          <a href="{% url 'checkout'%}" class="subBtn" type="submit" >Proceed Booking</a>
+          <button  class="subBtn cart" id="pr{{n.id}}" type="submit" >Proceed Booking</button>
           
-        </div>
+        </form>
         <!-- <form id="signUp" action="/itinerary" class="signupClass" method="post" >
           {% csrf_token %}
           <label class="label-heads1">Enter full name</label>
@@ -138,20 +126,25 @@
     </h2>
     <div class="booking-dets">
       
-    <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
+    <h4 class="mode">{{n.mode1}}</h4><h4 class="mode-price">{{n.mode1_price}}</h4>
     </div>
     <div class="booking-dets">
       
-       <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
+       <h4 class="mode">{{n.mode2}}</h4><h4 class="mode-price">{{n.mode2_price}}</h4>
        </div>
        <div class="booking-dets">
       
-         <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
+         <h4 class="mode">{{n.mode3}}</h4><h4 class="mode-price">{{n.mode3_price}}</h4>
          </div>
          <div class="booking-dets">
       
-           <h4 class="mode">{{n.mode}}</h4><h4 class="mode-price">{{n.mode_price}}</h4>
+           <h4 class="mode">{{n.mode4}}</h4><h4 class="mode-price">{{n.mode4_price}}</h4>
            </div>
+           <div class="booking-dets">
+      
+            <h4 class="mode">{{n.mode5}}</h4><h4 class="mode-price">{{n.mode5_price}}</h4>
+            </div>
+           
            <div class="recenttours">
            <h2 class="booking-heading">
             Related Tours
@@ -496,6 +489,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      if(localStorage.getItem('cart')==null){
+        var cart={}
+      }
+      else{
+        cart=JSON.parse(localStorage.getItem('cart'))
+      }
+      $('.cart').click(function(){
+        console.log('clicked');
+        var idstr=this.id.toString();
+        console.log(idstr)
+        if (cart[idstr]!=undefined){
+          name=document.getElementById('name').innerHTML;
+          qty=document.getElementById('quantity').innerHTML;
+          cart[idstr]=[name,qty];
+          
+        }
+        else{
+          name="My item";
+          qty=1;
+          cart[idstr]=[name,qty];
+
+
+        }
+        console.log(cart);
+        localStorage.setItem('cart',JSON.stringify(cart));
+    
+      })
+      </script>
     <script>
         
       if(scrl < 80)

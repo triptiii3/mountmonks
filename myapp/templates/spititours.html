@@ -70,29 +70,18 @@
 
                       <div class="card-front__bt">
                           <p class="card-front__text-view card-front__text-view--city">
-                              {{n.destination_title}}
+                              {{n.destination}}
                           </p>
                       </div>
                   </a>
                   <a class="card-back" href="./spititours/{{n.id}}">
-                      <video class="video__container" autoplay muted loop>
-                          <source class="video__media" src="{{n.inner_video}}">
-                      </video>
+                    <div class="back-image">
+                      <h1 class="learn-more">Learn More</h1></div>
                   </a>
               </div>
           </div>
 
-          <div class="inside-page">
-              <div class="inside-page__container">
-                  <h3 class="inside-page__heading inside-page__heading--city">
-                     {{n.inner_title}}
-                  </h3>
-                  <p class="inside-page__text">
-                     {{n.inner_details}}
-                  </p>
-                  <a href="{{destinations.slug}}" class="inside-page__btn inside-page__btn--city">View deals</a>
-              </div>
-          </div>
+          
       </div>
   </section>
   </section>

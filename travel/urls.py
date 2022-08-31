@@ -40,11 +40,12 @@ urlpatterns = [
     path('spititours', spititours ,name="spititours"),
     path('lehtours', lehtours ,name="lehtours"),
     path('weekendtrip', weekendtrip ,name="weekendtrip"),
+    path('travelmodes', travelmodes ,name="travelmodes"),
     
     path('backpacktours', backpacktours ,name="backpacktours"),
     
 
-    path('destination/<int:id>', leh ,name="leh"),
+    path('destination/<int:id>', destinationit ,name="destinationit"),
     
     path('aboutus', aboutus ,name="aboutus"),
     path('roadtrips/<int:id>', roaditinerary ,name="roaditinerary"),
@@ -54,6 +55,7 @@ urlpatterns = [
     path('lehtours/<int:id>', lehitinerary ,name="lehitinerary"),
     path('backpacktours/<int:id>', backpackitinerary ,name="backpackitinerary"),
     path('weekendtrip/<int:id>', weekendit ,name="weekendit"),
+    path('index/<int:id>', recentit ,name="recentit"),
     
     
 

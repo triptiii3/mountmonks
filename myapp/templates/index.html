@@ -94,10 +94,10 @@
   
   <div class="slider-wrapper">
     <ul class="item-slider">{% for n in populartoursData%}
-      <a class="panda" href="" >
+      <a class="panda" href="{{n.itlink}}" >
         <img src="{{n.destination_image.url}}"/><h4 class="bestseller">BestSeller</h4>
         
-      <h2> {{n.destination_title}}</h2>
+      <h2> {{n.destination}}</h2>
       
     <h4 class="newprice"> From {{n.destination_price}}</h4></a>
       {%endfor%}
@@ -116,10 +116,10 @@
       
       
       {% for n in recenttoursData%}
-      <a class="panda" href="" >
+      <a class="panda" href="./index/{{n.id}}" >
         <img src="{{n.destination_image.url}}"/><h4 class="bestseller">BestSeller</h4>
         
-      <h2> {{n.destination_title}}</h2>
+      <h2> {{n.destination}}</h2>
       
     <h4 class="newprice"> From {{n.destination_price}}</h4></a>
       {%endfor%}
