@@ -476,7 +476,7 @@ left: 78px;
 		left: -50px;
 	}
 	
-}@media only screen and (max-width:400px) {
+}@media only screen and (max-width:395px) {
 	*::-webkit-scrollbar {
 		width: 1px;
 	  }
