@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'travel.urls'
+ROOT_URLCONF = 'traveltour.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'travel.wsgi.application'
+WSGI_APPLICATION = 'traveltour.wsgi.application'
 
 
 # Database
