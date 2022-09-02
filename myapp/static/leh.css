@@ -550,7 +550,7 @@ top: -11px;
     margin-top: -12px;
     margin-bottom: -32px;
     font-family: 'Montserrat';
-    font-size: 18px;
+    font-size: 16px;
 }
 .expect{
     position: relative;
@@ -562,6 +562,7 @@ top: -11px;
     margin-top: -11px;
     margin-bottom: 57px;
     line-height: 1.5;
+    font-size: 16px;
     
 }
 .list{
@@ -702,7 +703,7 @@ li{
     margin-top: 61px;
     margin-bottom: -35px;
     font-family: 'Montserrat';
-    font-size: 18px;
+    font-size: 16px;
 }
 .para2{
     margin-bottom: 50px;
@@ -738,7 +739,7 @@ p{
 }
 .collapsible__header{
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 18px;
 }
 .days{
     color: #0059be;
@@ -783,7 +784,7 @@ p{
 
 /* Content styles - To make inner content look better */
 .collapsible__header p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .collapsible__content p {
@@ -1277,7 +1278,7 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     font-size: 15px;
     color: #000;
     float: left;
-    padding: 20px
+    padding: 18px
 }
 .panda{
     background: #fff;
