@@ -115,27 +115,27 @@
       </h2>
       <div class="booking-dets">
         
-      <h4 class="mode">{{n.mode1}}</h4><h4 class="mode-price">{{n.mode1_price}}</h4>
+      <h4 class="mode">{{n.mode1}}</h4><h4 class="mode-price">₹{{n.mode1_price}}</h4>
       </div>
       <div class="booking-dets">
         
-         <h4 class="mode">{{n.mode2}}</h4><h4 class="mode-price">{{n.mode2_price}}</h4>
+         <h4 class="mode">{{n.mode2}}</h4><h4 class="mode-price">₹{{n.mode2_price}}</h4>
          </div>
          <div class="booking-dets">
         
-           <h4 class="mode">{{n.mode3}}</h4><h4 class="mode-price">{{n.mode3_price}}</h4>
+           <h4 class="mode">{{n.mode3}}</h4><h4 class="mode-price">₹{{n.mode3_price}}</h4>
            </div>
            <div class="booking-dets">
         
-             <h4 class="mode">{{n.mode4|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode4_price|default_if_none:""}}</h4>
+             <h4 class="mode">{{n.mode4|default_if_none:""}}</h4><h4 class="mode-price">₹{{n.mode4_price|default_if_none:""}}/-</h4>
              </div>
              <div class="booking-dets">
         
-              <h4 class="mode">{{n.mode5|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode5_price|default_if_none:""}}</h4>
+              <h4 class="mode">{{n.mode5|default_if_none:""}}</h4><h4 class="mode-price">₹{{n.mode5_price|default_if_none:""}}/-</h4>
               </div>
               <div class="booking-dets">
         
-                <h4 class="mode">{{n.mode6|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode6_price|default_if_none:""}}</h4>
+                <h4 class="mode">{{n.mode6|default_if_none:""}}</h4><h4 class="mode-price">₹{{n.mode6_price|default_if_none:""}}/-</h4>
                 </div>
              
               <div class="recenttours">
@@ -384,6 +384,12 @@
       {{info.expect1}}</p>
 
 <p class="expect">{{info.expect2}}
+    </p>
+    <p class="expect">{{info.expect3|default_if_none:""}}
+    </p>
+    <p class="expect">{{info.expect4|default_if_none:""}}
+    </p>
+    <p class="expect">{{info.expect5|default_if_none:""}}
     </p>
     
   </div>

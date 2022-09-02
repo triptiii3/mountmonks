@@ -27,6 +27,8 @@ class bikingtours(models.Model):
     mode4_price=models.CharField(max_length=5000, null=True, blank=True )
     mode5=models.CharField(max_length=5000 , null=True, blank=True)
     mode5_price=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6_price=models.CharField(max_length=5000 , null=True, blank=True)
     batch1=models.CharField(max_length=5000 , null=True, blank=True)
     batch2=models.CharField(max_length=5000 , null=True, blank=True)
     batch3=models.CharField(max_length=5000 , null=True, blank=True)
@@ -108,6 +110,9 @@ class bikingtours(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     def __str__(self) :
         return 'destination' + '-' + self.destination
    
@@ -139,6 +144,8 @@ class recenttours(models.Model):
     mode4_price=models.CharField(max_length=5000, null=True, blank=True )
     mode5=models.CharField(max_length=5000 , null=True, blank=True)
     mode5_price=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6_price=models.CharField(max_length=5000 , null=True, blank=True)
     batch1=models.CharField(max_length=5000 , null=True, blank=True)
     batch2=models.CharField(max_length=5000 , null=True, blank=True)
     batch3=models.CharField(max_length=5000 , null=True, blank=True)
@@ -220,6 +227,9 @@ class recenttours(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     def __str__(self) :
         return 'destination' + '-' + self.destination
     
@@ -239,6 +249,8 @@ class roadtours(models.Model):
     mode4_price=models.CharField(max_length=5000, null=True, blank=True )
     mode5=models.CharField(max_length=5000 , null=True, blank=True)
     mode5_price=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6_price=models.CharField(max_length=5000 , null=True, blank=True)
     batch1=models.CharField(max_length=5000 , null=True, blank=True)
     batch2=models.CharField(max_length=5000 , null=True, blank=True)
     batch3=models.CharField(max_length=5000 , null=True, blank=True)
@@ -319,6 +331,9 @@ class roadtours(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
   
     
     def __str__(self) :
@@ -338,6 +353,8 @@ class spiti(models.Model):
     mode4_price=models.CharField(max_length=5000, null=True, blank=True )
     mode5=models.CharField(max_length=5000 , null=True, blank=True)
     mode5_price=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6_price=models.CharField(max_length=5000 , null=True, blank=True)
     batch1=models.CharField(max_length=5000 , null=True, blank=True)
     batch2=models.CharField(max_length=5000 , null=True, blank=True)
     batch3=models.CharField(max_length=5000 , null=True, blank=True)
@@ -418,6 +435,9 @@ class spiti(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     def __str__(self) :
         return 'destination' + '-' + self.destination
 
@@ -507,6 +527,9 @@ class trekking(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     def __str__(self) :
         return 'destination' + '-' + self.destination
     
@@ -527,6 +550,8 @@ class lehtrip(models.Model):
     mode4_price=models.CharField(max_length=5000, null=True, blank=True )
     mode5=models.CharField(max_length=5000 , null=True, blank=True)
     mode5_price=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6_price=models.CharField(max_length=5000 , null=True, blank=True)
     batch1=models.CharField(max_length=5000 , null=True, blank=True)
     batch2=models.CharField(max_length=5000 , null=True, blank=True)
     batch3=models.CharField(max_length=5000 , null=True, blank=True)
@@ -608,6 +633,9 @@ class lehtrip(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     def __str__(self) :
         return 'destination' + '-' + self.destination
    
@@ -633,6 +661,8 @@ class backpack(models.Model):
     mode4_price=models.CharField(max_length=5000, null=True, blank=True )
     mode5=models.CharField(max_length=5000 , null=True, blank=True)
     mode5_price=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6_price=models.CharField(max_length=5000 , null=True, blank=True)
     batch1=models.CharField(max_length=5000 , null=True, blank=True)
     batch2=models.CharField(max_length=5000 , null=True, blank=True)
     batch3=models.CharField(max_length=5000 , null=True, blank=True)
@@ -707,6 +737,9 @@ class backpack(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     def __str__(self) :
         return 'destination' + '-' + self.destination
     
@@ -733,6 +766,8 @@ class weekend(models.Model):
     mode4_price=models.CharField(max_length=5000, null=True, blank=True )
     mode5=models.CharField(max_length=5000 , null=True, blank=True)
     mode5_price=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6=models.CharField(max_length=5000 , null=True, blank=True)
+    mode6_price=models.CharField(max_length=5000 , null=True, blank=True)
     batch1=models.CharField(max_length=5000 , null=True, blank=True)
     batch2=models.CharField(max_length=5000 , null=True, blank=True)
     batch3=models.CharField(max_length=5000 , null=True, blank=True)
@@ -807,6 +842,9 @@ class weekend(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     def __str__(self) :
         return 'destination' + '-' + self.destination
     

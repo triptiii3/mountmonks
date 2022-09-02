@@ -101,6 +101,9 @@ class destinations(models.Model):
     exclusions5=models.CharField(max_length=5000 , null=True, blank=True)
     expect1=models.CharField(max_length=4000 , null=True, blank=True)
     expect2=models.CharField(max_length=4000 , null=True, blank=True)
+    expect3=models.CharField(max_length=4000 , null=True, blank=True)
+    expect4=models.CharField(max_length=4000 , null=True, blank=True)
+    expect5=models.CharField(max_length=4000 , null=True, blank=True)
     
 
     def __str__(self) :
