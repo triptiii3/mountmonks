@@ -689,6 +689,9 @@ top: -11px;
         font-size: 22px;
     }
 }
+li{
+    list-style: none;
+}
 .lists{
     position: relative;
     left: 233px;
