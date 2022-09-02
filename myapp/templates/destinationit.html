@@ -94,8 +94,10 @@
           <select name="mode" id="cars" class="selectpicker" >
             <option value={{n.mode1_price}} >{{n.mode1}}</option>
             <option value={{n.mode2_price}}>{{n.mode2}}</option>
-            <option value={{n.mode1_price}}>{{n.mode3}}</option>
+            <option value={{n.mode3_price}}>{{n.mode3}}</option>
             <option value={{n.mode4_price}}>{{n.mode4}}</option>
+            <option value={{n.mode5_price}}>{{n.mode5}}</option>
+            <option value={{n.mode6_price}}>{{n.mode6}}</option>
           </select>
           <label class="label-heads5">Number of people</label>
           <input type="text" id="quantity" placeholder="People" name="people" value="{{people}}" required><br>
@@ -131,6 +133,10 @@
         
               <h4 class="mode">{{n.mode5|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode5_price|default_if_none:""}}</h4>
               </div>
+              <div class="booking-dets">
+        
+                <h4 class="mode">{{n.mode6|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode6_price|default_if_none:""}}</h4>
+                </div>
              
               <div class="recenttours">
                 <h2 class="booking-heading">
