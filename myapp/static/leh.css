@@ -694,6 +694,9 @@ li{
 }
 .lists{
     position: relative;
+    
+    width: 551px;
+
     left: 233px;
     top: -87px;
     margin-top: 61px;
@@ -1067,7 +1070,7 @@ footer{
 
 .book{
     background-color: #fff;
-    height: 443px;
+    height: 566px;
     border-radius: 5px;
     width: 366px;
     /* border: 1px solid; */
