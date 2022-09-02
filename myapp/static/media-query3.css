@@ -81,22 +81,7 @@
         top: -613px;
         left: -96px;
     }
-    #hamburger {
-		left:135px;
-		position: relative;
-		top: 11px;
-	
-	}
-    #nav.showNav #hamburger {
-		-webkit-transform: translateX(50px);
-		-moz-transform: translateX(50px);
-		-ms-transform: translateX(50px);
-		-o-transform: translateX(50px);
-		transform: translateX(50px);
-		position: relative;
-		top: -50px;
-    left: 400px;
-	}
+    
     footer {
         background-color: #303030;
         left: -18px;
@@ -186,7 +171,7 @@
 		left: -50px;
 	}
     #hamburger{
-        left: 434px;
+        left: 123px;
     }
     #close{
         left: 433px;
@@ -274,4 +259,12 @@
         font-size: 15px;
     }
     
+}
+@media only screen and (max-width:380px){
+    #hamburger {
+        left: 123px;
+    }
+    #nav #menuwrapper{
+        width: 100%;
+    }
 }
