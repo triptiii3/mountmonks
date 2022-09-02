@@ -720,7 +720,9 @@ li{
     position: relative;
     top: 7px;
 }
-
+.card-front__tp img{
+    height: 366px;
+}
 .accordion {
     width: 801px;
     position: relative;

@@ -81,7 +81,7 @@ margin-bottom: 0px;
     
     top: -42px;
     position: relative;
-    left: 10px;
+    left: -17px;
     width: 180px;
     height: 100px;
 
@@ -498,7 +498,7 @@ footer{
     height: initial;
     justify-content: space-evenly;
     padding: 1rem;
-    top: -52px;
+    top: -200px;
     position: relative;
     left: 448px;
   }
@@ -530,7 +530,7 @@ footer{
     left: 100px;
   }
   .label1{
-    top: 63px;
+    top: -91px;
   }
   .label2{
     top: -110px;
