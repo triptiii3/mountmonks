@@ -264,7 +264,11 @@
     #hamburger {
         left: 123px;
     }
-    #nav #menuwrapper{
-        width: 100%;
+    #nav.showNav #menuWrapper {
+        height: 300px;
+        overflow-y: auto;
+        left: -362px;
+        font-size: 15px;
+        left: -175px;
     }
 }
