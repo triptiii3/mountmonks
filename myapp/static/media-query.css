@@ -582,7 +582,7 @@ left: 78px;
 		transform: translateX(0);
 		position: relative;
 		top: -50px;
-    left: 365px;
+    left: 319px;
 	}
 	#nav.showNav #hamburger {
 		-webkit-transform: translateX(50px);
@@ -704,12 +704,7 @@ left: 78px;
 		width: 50px;
 		margin-top: -20px;
 	}
-	footer{
-		position: relative;
 	
-		top: -2178px;
-	
-	}
 	.contact-info{
 		margin-left: 36px;
 	}
@@ -718,8 +713,8 @@ left: 78px;
 		left: -95px;
 	}
 	.imageblock{
-		height: 232px;
-    width: 232px;
+		height: 214px;
+    width: 183px;
 	}
 	.brandlogo{
 		height: 109px;
@@ -740,7 +735,7 @@ left: 78px;
     left: -172px;
     height: 100px;
     top: -199px;
-    width: 195px;
+    width: 178px;
 
 	
 	}
