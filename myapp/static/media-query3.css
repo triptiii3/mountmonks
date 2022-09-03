@@ -261,14 +261,54 @@
     
 }
 @media only screen and (max-width:380px){
+    body{
+        overflow-x: hidden;
+    }
     #hamburger {
-        left: 123px;
+        left: 342px;
     }
     #nav.showNav #menuWrapper {
-        height: 300px;
-        overflow-y: auto;
-        left: -362px;
+        overflow: hidden;
         font-size: 15px;
-        left: -175px;
+        left: -353px;
+        top: 14px;
+    }
+    #close {
+        left: 314px;
+        top: 20px;
+    }
+    .trip-details-photos{
+        top: -326px;
+
+        width: 368px;
+    
+    }
+    .trip-overview, .trip-details {
+        width: 309px;
+        font-size: 12px;
+        top: -295px;
+    }
+    .trip-basics{
+        top: -338px;
+    }
+    .accordion {
+        font-size: 15px;
+        left: 179px;
+        top: 360px;
+        width: 380px;
+    }
+    .trip-det{
+        left: -66px;
+    }
+    .lists {
+        position: relative;
+        left: -13px;
+        width: 300px;
+        top: -50px;
+        font-size: 15px;
+    }
+    .sidebar {
+        left: 63px;
+        top: 4098px;
     }
 }

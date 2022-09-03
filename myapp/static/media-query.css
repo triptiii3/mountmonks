@@ -30,9 +30,9 @@
 		position: relative;
 	}
 	.slider-controls {
-		margin-top: 30px;
+		margin-top: 12px;
 		text-align: center;
-		left: -114px;
+		left: -19px;
 		position: relative;
 	}
 	.details {
@@ -167,6 +167,7 @@
 	html{
 		font-size: 55%;
 		overflow-x: hidden;
+
 	}
 	.mount{
 		font-size: 45px;
@@ -472,7 +473,7 @@ left: 78px;
 	.sliders{
 		position: relative;
 		top: -377px;
-    left: -54px;
+    left: -25px;
 	}
 	.sliders h1{
 		font-size: 25px;
@@ -485,7 +486,7 @@ left: 78px;
 	.sliders2{
 		position: relative;
 		top: -537px;
-    left: -54px;
+    left: -16px;
 	}
 	.sliders2 h1{
 		font-size: 25px;
@@ -539,6 +540,9 @@ left: 78px;
 	}
 	
 }@media only screen and (max-width:395px) {
+	body{
+		height: max-content;
+	}
 	*::-webkit-scrollbar {
 		width: 1px;
 	  }
@@ -894,7 +898,7 @@ left: 55px;
 	.sliders{
 		position: relative;
 		top: -377px;
-    left: -54px;
+    left: -25x;
 	}
 	.sliders h1{
 		font-size: 25px;
