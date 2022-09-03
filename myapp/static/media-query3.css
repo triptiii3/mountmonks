@@ -267,11 +267,16 @@
     #hamburger {
         left: 342px;
     }
+  
     #nav.showNav #menuWrapper {
         overflow: hidden;
         font-size: 15px;
-        left: -353px;
+        left: -167px;
         top: 14px;
+    }
+    .detail-link, .itinerary-link, .reviews-link {
+        left: 20px;
+        font-size: 12px;
     }
     #nav.showNav #close {
         -webkit-transform: translateX(0);

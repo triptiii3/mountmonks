@@ -50,8 +50,10 @@
   <div class="row">
     <ul class="secondnav">
       <li class="detail-link"><a href="#detail" >Detail</a> </li>
+
       <li class="itinerary-link"><a href="#itinerary" >Itinerary</a> </li>
-      <li class="reviews-link"><a href="#reviews" >Reviews</a> </li>
+      <li class="reviews-link"><a href="#inclusions" >Inclusions</a> </li>
+      <li class="reviews-link"><a href="#exclusions" >Exclusions</a> </li>
       
     </ul>
 
@@ -91,8 +93,10 @@
           <select name="mode" id="cars" class="selectpicker" >
             <option value={{n.mode1_price}} >{{n.mode1}}</option>
             <option value={{n.mode2_price}}>{{n.mode2}}</option>
-            <option value={{n.mode1_price}}>{{n.mode3}}</option>
+            <option value={{n.mode3_price}}>{{n.mode3}}</option>
             <option value={{n.mode4_price}}>{{n.mode4}}</option>
+            <option value={{n.mode5_price}}>{{n.mode5}}</option>
+            <option value={{n.mode6_price}}>{{n.mode6}}</option>
           </select>
           <label class="label-heads5">Number of people</label>
           <input type="text" id="quantity" placeholder="People" name="people" value="{{people}}" required><br>
@@ -110,24 +114,28 @@
       </h2>
       <div class="booking-dets">
         
-      <h4 class="mode">{{n.mode1}}</h4><h4 class="mode-price">{{n.mode1_price}}</h4>
+      <h4 class="mode">{{n.mode1}}</h4><h4 class="mode-price">₹{{n.mode1_price}}</h4>
       </div>
       <div class="booking-dets">
         
-         <h4 class="mode">{{n.mode2}}</h4><h4 class="mode-price">{{n.mode2_price}}</h4>
+         <h4 class="mode">{{n.mode2}}</h4><h4 class="mode-price">₹{{n.mode2_price}}</h4>
          </div>
          <div class="booking-dets">
         
-           <h4 class="mode">{{n.mode3}}</h4><h4 class="mode-price">{{n.mode3_price}}</h4>
+           <h4 class="mode">{{n.mode3}}</h4><h4 class="mode-price">₹{{n.mode3_price}}</h4>
            </div>
            <div class="booking-dets">
         
-             <h4 class="mode">{{n.mode4|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode4_price|default_if_none:""}}</h4>
+             <h4 class="mode">{{n.mode4|default_if_none:""}}</h4><h4 class="mode-price">₹{{n.mode4_price|default_if_none:""}}</h4>
              </div>
              <div class="booking-dets">
         
-              <h4 class="mode">{{n.mode5|default_if_none:""}}</h4><h4 class="mode-price">{{n.mode5_price|default_if_none:""}}</h4>
+              <h4 class="mode">{{n.mode5|default_if_none:""}}</h4><h4 class="mode-price">₹{{n.mode5_price|default_if_none:""}}</h4>
               </div>
+              <div class="booking-dets">
+        
+                <h4 class="mode">{{n.mode6|default_if_none:""}}</h4><h4 class="mode-price">₹{{n.mode6_price|default_if_none:""}}</h4>
+                </div>
              
               <div class="recenttours">
                 <h2 class="booking-heading">
@@ -155,30 +163,27 @@
       </div>
   
        
-     </div>{%endfor%}
+     </div>
   
     </section>
   <section class="trip-overall">
-    {% for info in lehtripData %}
+ 
     
     <div class="trip-details-photos" id="photos">
       
-      <img src="{{info.main_image.url}}" alt="main Image" id="mainImage" alt="">
+      <img src="{{n.main_image.url}}" alt="main Image" id="mainImage" alt="">
             <div id="imageDiv" onclick="changeImage(event)">
-              <img src="{{info.destination_image1.url}}" class="imgStyle" alt="destinationimages">
-              <img src="{{info.destination_image2.url}}" class="imgStyle" alt="destinationimages">
-              <img src="{{info.destination_image3.url}}" class="imgStyle" alt="destinationimages">
-              <img src="{{info.destination_image4.url}}" class="imgStyle" alt="destinationimages">
-              <img src="{{info.destination_image5.url}}" class="imgStyle" alt="destinationimages">
-              <img src="{{info.destination_image6.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{n.destination_image1.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{n.destination_image2.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{n.destination_image3.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{n.destination_image4.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{n.destination_image5.url}}" class="imgStyle" alt="destinationimages">
+              <img src="{{n.destination_image6.url}}" class="imgStyle" alt="destinationimages">
             </div>
-    
-      
-      
-  </div>
+            </div>
 </div> 
   <div class="trip-basics" id="detail">
-    <h2 class="trip-name" > {{ info.destination}}</h2>
+    <h2 class="trip-name" > {{ n.destination}}</h2>
     <i class="fa fa-star star "></i>
     <i class="fa fa-star star"></i>
     <i class="fa fa-star star"></i>
@@ -188,25 +193,25 @@
   <div class="trip-overview">
    <div class="row">
     <div class="col "><img src="{% static './images/time.png'%}">
-    <h3 class="col3">{{ info.time}}</h3>
+    <h3 class="col3">{{ n.time}}</h3>
   </div>
   <div class="col "><img src="{% static './images/group.png'%}">
-    <h3 class="col3">Group : {{ info.group}}</h3>
+    <h3 class="col3">Group : {{ n.group}}</h3>
   </div>
   <div class="col "><img src="{% static './images/trek.png'%}">
-    <h3 class="col3">{{ info.hiketype}}</h3>
+    <h3 class="col3">{{ n.hiketype}}</h3>
   </div>
 
    </div>
    <div class="row">
     <div class="col"><img src="{% static './images/difficulty.png'%}">
-    <h3 class="col3">Difficulty : {{ info.difficulty}}</h3>
+    <h3 class="col3">Difficulty : {{ n.difficulty}}</h3>
   </div>
   <div class="col"><img src="{% static './images/path.png'%}">
-    <h3 class="col3">Pickup : {{ info.pickup}}</h3>
+    <h3 class="col3">Pickup : {{ n.pickup}}</h3>
   </div>
   <div class="col"><img src="{% static './images/people.png'%}">
-    <h3 class="col3">Min age : {{ info.minage}}</h3>
+    <h3 class="col3">Min age : {{ n.minage}}</h3>
   </div>
 
    </div>
@@ -221,66 +226,110 @@
       <div class="accordion__collapsible">
           <div class="collapsible__header">
             <p>
-              <span class="days">{{info.dayno1}}</span> {{info.itineraryhead1}}</p>
+              <span class="days">{{n.dayno1}}</span> {{n.itineraryhead1}}</p>
           </div>
           <div class="collapsible__content">
               <p>
-                 {{info.daycontent1}}
+                 {{n.daycontent1}}
               </p>
           </div>
       </div>
       <div class="accordion__collapsible">
         <div class="collapsible__header">
           <p>
-            <span class="days">{{info.dayno2}}</span> {{info.itineraryhead2}}</p>
+            <span class="days">{{n.dayno2}}</span> {{n.itineraryhead2}}</p>
         </div>
         <div class="collapsible__content">
             <p>
-               {{info.daycontent2}}
+               {{n.daycontent2}}
             </p>
         </div>
     </div>
     <div class="accordion__collapsible">
       <div class="collapsible__header">
         <p>
-          <span class="days">{{info.dayno3}}</span> {{info.itineraryhead3}}</p>
+          <span class="days">{{n.dayno3}}</span> {{n.itineraryhead3}}</p>
       </div>
       <div class="collapsible__content">
           <p>
-             {{info.daycontent3}}
+             {{n.daycontent3}}
           </p>
       </div>
   </div>
   <div class="accordion__collapsible">
     <div class="collapsible__header">
       <p>
-        <span class="days">{{info.dayno4}}</span> {{info.itineraryhead4}}</p>
+        <span class="days">{{n.dayno4}}</span> {{n.itineraryhead4}}</p>
     </div>
     <div class="collapsible__content">
         <p>
-           {{info.daycontent4}}
+           {{n.daycontent4}}
         </p>
     </div>
 </div>
 <div class="accordion__collapsible">
   <div class="collapsible__header">
     <p>
-      <span class="days">{{info.dayno5|default_if_none:"" }}</span> {{info.itineraryhead5|default_if_none:"" }}</p>
+      <span class="days">{{n.dayno5|default_if_none:"" }}</span> {{n.itineraryhead5|default_if_none:"" }}</p>
   </div>
   <div class="collapsible__content">
       <p>
-         {{info.daycontent5|default_if_none:"" }}
+         {{n.daycontent5|default_if_none:"" }}
       </p>
   </div>
 </div>
 <div class="accordion__collapsible">
   <div class="collapsible__header">
     <p>
-      <span class="days">{{info.dayno6|default_if_none:"" }}</span> {{info.itineraryhead6|default_if_none:"" }}</p>
+      <span class="days">{{n.dayno6|default_if_none:"" }}</span> {{n.itineraryhead6|default_if_none:"" }}</p>
   </div>
   <div class="collapsible__content">
       <p>
-         {{info.daycontent6|default_if_none:"" }}
+         {{n.daycontent6|default_if_none:"" }}
+      </p>
+  </div>
+</div>
+<div class="accordion__collapsible">
+  <div class="collapsible__header">
+    <p>
+      <span class="days">{{n.dayno7|default_if_none:"" }}</span> {{n.itineraryhead7|default_if_none:"" }}</p>
+  </div>
+  <div class="collapsible__content">
+      <p>
+         {{n.daycontent7|default_if_none:"" }}
+      </p>
+  </div>
+</div>
+<div class="accordion__collapsible">
+  <div class="collapsible__header">
+    <p>
+      <span class="days">{{n.dayno8|default_if_none:"" }}</span> {{n.itineraryhead8|default_if_none:"" }}</p>
+  </div>
+  <div class="collapsible__content">
+      <p>
+         {{n.daycontent8|default_if_none:"" }}
+      </p>
+  </div>
+</div>
+<div class="accordion__collapsible">
+  <div class="collapsible__header">
+    <p>
+      <span class="days">{{n.dayno9|default_if_none:"" }}</span> {{n.itineraryhead9|default_if_none:"" }}</p>
+  </div>
+  <div class="collapsible__content">
+      <p>
+         {{n.daycontent9|default_if_none:"" }}
+      </p>
+  </div>
+</div>
+<div class="accordion__collapsible">
+  <div class="collapsible__header">
+    <p>
+      <span class="days">{{n.dayno10|default_if_none:"" }}</span> {{n.itineraryhead10|default_if_none:"" }}</p>
+  </div>
+  <div class="collapsible__content">
+      <p>
+         {{n.daycontent10|default_if_none:"" }}
       </p>
   </div>
 </div>
@@ -296,28 +345,34 @@
   <div class="trip-details">
  
     <h3>Meeting point</h3>
-    <p class="trip-det">{{info.meetingpoint}}</p>
+    <p class="trip-det">{{n.meetingpoint}}</p>
   </div>
-  <div class="trip-details">
+  <div class="trip-details" id="inclusions">
  
     <h3>Price Includes</h3>
     <ul>
-      <li class="lists">{{info.inclusions1}} </li>
-      <li class="lists">{{info.inclusions2}}</li>
-      <li class="lists">{{info.inclusions3}}</li>
-      <li class="lists">{{info.inclusions4}}</li>
-      <li class="lists">{{info.inclusions5}}</li>
+      <li class="lists">{{n.inclusions1}} </li>
+      <li class="lists">{{n.inclusions2}}</li>
+      <li class="lists">{{n.inclusions3}}</li>
+      <li class="lists">{{n.inclusions4}}</li>
+      <li class="lists">{{n.inclusions5}}</li>
+      <li class="lists">{{n.inclusions6}}</li>
+      <li class="lists">{{n.inclusions7}}</li>
+      <li class="lists">{{n.inclusions8}}</li>
+      <li class="lists">{{n.inclusions9|default_if_none:"" }}</li>
+      <li class="lists">{{n.inclusions10|default_if_none:"" }}</li>
+      
     </ul>
   </div>
-  <div class="trip-details">
+  <div class="trip-details" id="exclusions">
  
     <h3>Price Excludes</h3>
     <ul>
-      <li class="lists">{{info.exclusions1}} </li>
-      <li class="lists">{{info.exclusions2}} </li>
-      <li class="lists">{{info.exclusions3}} </li>
-      <li class="lists">{{info.exclusions4}} </li>
-      <li class="lists">{{info.exclusions5}} </li>
+      <li class="lists">{{n.exclusions1}} </li>
+      <li class="lists">{{n.exclusions2}} </li>
+      <li class="lists">{{n.exclusions3}} </li>
+      <li class="lists">{{n.exclusions4}} </li>
+      <li class="lists">{{n.exclusions5}} </li>
     </ul>
   </div>
 
@@ -325,9 +380,15 @@
  
     <h3>What to expect</h3>
     <p class="expect">
-      {{info.expect1}}</p>
+      {{n.expect1}}</p>
 
-<p class="expect">{{info.expect2}}
+<p class="expect">{{n.expect2}}
+    </p>
+    <p class="expect">{{n.expect3|default_if_none:""}}
+    </p>
+    <p class="expect">{{n.expect4|default_if_none:""}}
+    </p>
+    <p class="expect">{{n.expect5|default_if_none:""}}
     </p>
     
   </div>
