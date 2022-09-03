@@ -94,7 +94,7 @@
 
 @media only screen and (max-width:480px){
     html,body{
-        font-size: 10px;
+        font-size: 15px;
 
     }
     .destination-head{
@@ -263,10 +263,44 @@
 @media only screen and (max-width:380px){
     body,html{
         overflow-x: hidden;
+       
+    }
+    .card-section{
+        left: 53px;
+    position: relative;
     }
     #hamburger {
         left: 342px;
     }
+    .destination-head {
+        position: relative;
+        top: 159px;
+        font-size: 35px;
+    }
+    .related {
+        border-radius: 10px;
+        height: 342px;
+        width: 343px;
+    }
+    .trip-name {
+        position: relative;
+        font-size: 25px;
+        font-family: 'Poppins';
+        color: #373737;
+    }
+    *::-webkit-scrollbar {
+		width: 1px;
+	  }
+	
+	  *::-webkit-scrollbar-track {
+		background: #ffffff;
+	  }
+	
+	  *::-webkit-scrollbar-thumb {
+		background-color: #7a7a7a;
+		border-radius: 15px;
+		border: 3px solid #ffffff;
+	  }
   
     #nav.showNav #menuWrapper {
         overflow: hidden;
@@ -275,9 +309,9 @@
         top: 14px;
     }
     .detail-link, .itinerary-link, .reviews-link {
-        left: 20px;
-        font-size: 12px;
-    }
+    left: 20px;
+    font-size: 12px;
+}
     #nav.showNav #close {
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
