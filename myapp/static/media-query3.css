@@ -261,7 +261,7 @@
     
 }
 @media only screen and (max-width:380px){
-    body{
+    body,html{
         overflow-x: hidden;
     }
     #hamburger {
@@ -273,8 +273,19 @@
         left: -353px;
         top: 14px;
     }
+    #nav.showNav #close {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        left: 318px;
+    }
+    #mainImage {
+        height: 241px;
+        width: 329px;}
     #close {
-        left: 314px;
+        left: 371px;
         top: 20px;
     }
     .trip-details-photos{
@@ -288,18 +299,28 @@
         font-size: 12px;
         top: -295px;
     }
-    .trip-basics{
-        top: -338px;
+    .trip-basics {
+        top: -447px;
+        position: relative;
     }
+    
     .accordion {
         font-size: 15px;
         left: 179px;
         top: 360px;
         width: 380px;
     }
-    .trip-det{
-        left: -66px;
+    .col3 {
+        font-size: 12px;
+        width: 5px;
     }
+    
+    .trip-det {
+            left: 170px;
+            top: -71px;
+            position: relative;
+        }
+    
     .lists {
         position: relative;
         left: -13px;
@@ -308,7 +329,20 @@
         font-size: 15px;
     }
     .sidebar {
-        left: 63px;
-        top: 4098px;
+        left: 201px;
+        top: 3830px;
+        width: 300px;
+    }
+    .checkout{
+        width: 336px;
+        /* border: 1px solid; */
+        box-shadow: 0px 0px 6px rgb(0 0 0 / 25%);
+        z-index: 2;
+        position: relative;
+        float: right;
+        right: 130px;
+        top: -100px;
+        left: -144px;
+    
     }
 }
