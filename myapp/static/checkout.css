@@ -162,3 +162,21 @@ position: relative;
       margin-bottom: 20px;
     }
   }
+  @media (max-width: 380px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    
+    .col-25 {
+      margin-bottom: 20px;
+      top: -1278px;
+      width: 380px;
+      position: relative;
+  }
+  .col-75 {
+    -ms-flex: 75%;
+    flex: 75%;
+    top: 532px;
+    position: relative;
+}
+  }

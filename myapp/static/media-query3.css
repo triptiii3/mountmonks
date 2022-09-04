@@ -265,12 +265,45 @@
         overflow-x: hidden;
        
     }
+    .call-button {
+        position: relative;
+        left: 18px;
+        top: 22px;
+        font-size: 10px;
+    }
+    .mail-button {
+        position: relative;
+        top: 7px;
+        left: 106px;
+        font-size: 10px;
+    }
+    .social {
+        position: relative;
+        left: -60px;
+        top: -17px;
+        font-size: 10px;
+    }
     .card-section{
         left: 53px;
     position: relative;
     }
     #hamburger {
-        left: 342px;
+        left: 333px;
+    }
+    .searchInput {
+        width: 20rem;
+        height: 3rem;
+        padding: 0 3rem;
+        border-radius: 2rem;
+        border: none;
+        transition: transform 0.1s ease-in-out;
+    }
+    .searchInputIcon {
+        position: absolute;
+        right: 1.8000000000000007rem;
+        top: 14px;
+        color: #a1a1a1;
+        transition: all 0.1s ease-in-out;
     }
     .destination-head {
         position: relative;
