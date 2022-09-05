@@ -522,6 +522,11 @@ fieldset {
   
   background-size: cover ;
 }
+.card-front__tp--city img{
+  height: 400px;
+  width: 300px;
+  background-size: cover ;
+}
 
 .card-front__tp--ski {
   
@@ -566,7 +571,7 @@ fieldset {
   background: linear-gradient(rgba(0, 0, 0, 0.216),rgba(0, 0, 0, 0.134)),url(./images/backimg.jpg);
   background-size: cover;
   height: 40rem;
-  width: 33rem;
+  width: 31rem;
   position: relative;
   top: -21px;
 }

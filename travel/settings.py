@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     
     'django.contrib.admin',
     'django.contrib.auth',
+    
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -146,7 +147,7 @@ MEDIA_ROOT = (
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static"),
 ]
-
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 MESSAGE_TAGS ={
     messages.ERROR:'danger'
 }
