@@ -94,9 +94,13 @@
 
 @media only screen and (max-width:480px){
     html,body{
-        font-size: 15px;
+        font-size: 55%;
 
     }
+    .searchInput {
+        width: 22rem;
+        height: 4rem;}
+        
     .destination-head{
         position: relative;
         top: 205px;
@@ -260,7 +264,7 @@
     }
     
 }
-@media only screen and (max-width:390px){
+@media only screen and (max-width:400px){
     body,html{
         overflow-x: hidden;
        

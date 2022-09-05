@@ -539,7 +539,7 @@ left: 78px;
 		left: -50px;
 	}
 	
-}@media only screen and (max-width:395px) {
+}@media only screen and (max-width:400px) {
 	body{
 		height: max-content;
 	}
@@ -898,7 +898,7 @@ left: 55px;
 	.sliders{
 		position: relative;
 		top: -377px;
-    left: -25px;
+    left: -46px;
 	}
 	.sliders h1{
 		font-size: 25px;
