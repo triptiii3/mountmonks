@@ -94,13 +94,13 @@
 
 @media only screen and (max-width:480px){
     html,body{
-        font-size: 55%;
+        font-size: 75%;
 
     }
     .searchInput {
-        width: 22rem;
-        height: 4rem;}
-        
+        width: 30rem;
+        height: 5rem;}
+
     .destination-head{
         position: relative;
         top: 205px;
@@ -175,10 +175,10 @@
 		left: -50px;
 	}
     #hamburger{
-        left: 123px;
+        left: 363px;
     }
     #close{
-        left: 433px;
+        left: 356px;
     }
     #nav #menuWrapper {
         height: 300px;
