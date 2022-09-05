@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0zn*7p4ox!k*j@$se+vvf^i0frl-)&nz^^*d1#00a+3jzpuqsv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ '0.0.0.0',
     'mountmonks.herokuapp.com', # your herokuapp url
@@ -130,9 +130,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'static-root')
-MEDIA_URL = '/images/'
+MEDIA_URL = 'images/'
 
 
 # Default primary key field type
@@ -141,12 +141,12 @@ MEDIA_URL = '/images/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = (
-    os.path.join(BASE_DIR,'images-root')
+    os.path.join(BASE_DIR,'images')
 )
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static"),
 ]
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 MESSAGE_TAGS ={
     messages.ERROR:'danger'
 }
