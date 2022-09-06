@@ -15,10 +15,11 @@ Including another URLconf
 """
 from multiprocessing.spawn import import_main_path
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include, re_path
 from myapp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -56,6 +57,7 @@ urlpatterns = [
     path('backpacktours/<int:id>', backpackitinerary ,name="backpackitinerary"),
     path('weekendtrip/<int:id>', weekendit ,name="weekendit"),
     path('index/<int:id>', recentit ,name="recentit"),
+    re_path(r'^media/(?p<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT})
     
     
 
@@ -64,5 +66,5 @@ urlpatterns = [
     
 ]
 
-urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATICFILES_DIRS)
-urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+# urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATICFILES_DIRS)
+# urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
