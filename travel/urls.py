@@ -57,7 +57,7 @@ urlpatterns = [
     path('backpacktours/<int:id>', backpackitinerary ,name="backpackitinerary"),
     path('weekendtrip/<int:id>', weekendit ,name="weekendit"),
     path('index/<int:id>', recentit ,name="recentit"),
-    re_path(r'^media/(?p<path>.*)$',serve,{'document_root':settings.MEDIA_ROOT})
+    
     
     
 
@@ -65,6 +65,6 @@ urlpatterns = [
    
     
 ]
-
-# urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATICFILES_DIRS)
-# urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns+= static(settings.STATIC_URL,document_root=settings.STATICFILES_DIRS) 
+    urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
