@@ -117,8 +117,14 @@
     }
  
     .card{
-        left: -428px;
+        
+        left: -472px;
+    height: 300px;
+    width: 300px;
     }
+    .card-front__tp--city {
+        background-size: cover;
+        height: 300px;}
     .label1{
         left: 13px;
         font-size: 30px;
