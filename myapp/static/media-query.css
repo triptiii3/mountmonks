@@ -306,8 +306,8 @@
 		left: -95px;
 	}
 	.imageblock{
-		height: 204px;
-		width: 183px;
+		height: 208px;
+		width: 198px;
 	}
 	.brandlogo{
 		height: 109px;
@@ -439,8 +439,19 @@ left: 78px;
 	.counter-txt{
 		width: 212px;
     height: 139px;
-    left: 47px;
+    left: 32px;
 	top: 439px;
+	}
+	#nav.showNav .container4 {
+		height: auto;
+		float: left;
+		display: block;
+		width: 100%;
+		left: 378px;
+	}
+	#close{
+		right: 30px;
+		position: relative;
 	}
 	
 	.reviews{
@@ -544,7 +555,8 @@ left: 78px;
 	}
 	#hamburger{
 		position: relative;
-		right:21px ;
+		right:-163px ;
+		top: 11px;
 	}
 	.social{
 		position: relative;
@@ -670,7 +682,7 @@ left: 78px;
 		height: 55px;
 		width: 169px;
     margin-bottom: 127px;
-    left: -22px;
+    left: -4px;
   
     top: -100px;
 		z-index: 2;
@@ -689,13 +701,13 @@ left: 78px;
     padding: 2px 55px;
 	}
 	.weekend{
-		left: -17px;
+		left:4px;
 		top: -148px;
 	
 	}
 	.backpack{
 		top: -148px;
-		left: -16px;
+		left: -4px;
 	}
 	.custom{
 		left: 3px;
@@ -757,7 +769,7 @@ left: 78px;
 	.details{
 		position: relative;
     font-size: 12px;
-    left: -172px;
+    left: -157px;
     height: 100px;
     top: -199px;
     width: 178px;
