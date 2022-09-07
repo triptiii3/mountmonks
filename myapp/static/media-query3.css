@@ -146,6 +146,12 @@
     .contact-info{
 		margin-left: 36px;
 	}
+    .learn-more {
+        
+        position: relative;
+        top: 156px;
+        left: 105px;
+    }
 	.footer-col{
 		position: relative;
 		left: -37px;

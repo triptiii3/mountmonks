@@ -567,7 +567,7 @@ left: 78px;
 	
 	}
 	#close{
-		left: 138px;
+		left: 159px;
 		position: relative;
 		top: -18px;
 	}
@@ -613,10 +613,11 @@ left: 78px;
     top: -62px;
 	}
 	header{
-		height: 299px;
-		width: 382px;
-		top: -70px;
-		margin-bottom: 95px;
+		
+			height: 317px;
+			width: 44rem;
+			top: -45px;
+			margin-bottom: 132px;
 	}
 	
 	.vertical{
@@ -948,11 +949,16 @@ left: 55px;
         top: 7px;
         left: 106px;
 	}
-	.social{
-		position: relative;
-        left: -53px;
-        top: -14px;
-    
+	.social {
+		position: absolute;
+		left: -67px;
+		top: 12px;
+	}
+	.panda{
+		width: 342px;
+	}
+	.newprice{
+		left: 25px;
 	}
 	.signup-button{
 		position: relative;
