@@ -169,6 +169,28 @@
 		overflow-x: hidden;
 
 	}
+	*::-webkit-scrollbar {
+		width: 1px;
+	  }
+	
+	  *::-webkit-scrollbar-track {
+		background: #ffffff;
+	  }
+	
+	  *::-webkit-scrollbar-thumb {
+		background-color: #7a7a7a;
+		border-radius: 15px;
+		border: 3px solid #ffffff;
+	  }
+	#hamburger {
+		display: none;
+		width: 25px;
+		height: 24px;
+		position: fixed;
+		right: 21px;
+		top: 15px;
+		cursor: pointer;
+	}
 	.mount{
 		font-size: 45px;
 		text-align: center;
@@ -182,11 +204,11 @@
 		left: 221px;
     top: -62px;
 	}
-	header{
-		height: 327px;
-		width: 480px;
-    top: -70px;
-	margin-bottom: 95px;
+	header {
+		height: 31rem;
+		width: 47rem;
+		top: -70px;
+		margin-bottom: 95px;
 	}
 	
 	.vertical{
@@ -478,10 +500,15 @@ left: 78px;
 	.sliders h1{
 		font-size: 25px;
 	}
-	.slider-wrapper{
+	.slider-wrapper {
 		position: relative;
 		left: -84px;
-
+		width: 350px;
+	}
+	
+	
+	.item-slider{
+		width: 350px;
 	}
 	.sliders2{
 		position: relative;
@@ -612,14 +639,11 @@ left: 78px;
 		left: 221px;
     top: -62px;
 	}
-	header{
-		
-			height: 317px;
-			width: 44rem;
-			top: -45px;
-			margin-bottom: 132px;
-	}
-	
+	header {
+		height: 317px;
+		width: 45rem;
+		top: -45px;
+		margin-bottom: 132px;}
 	.vertical{
 		position: relative;
 		top: -42px;
@@ -959,6 +983,9 @@ left: 55px;
 	}
 	.newprice{
 		left: 25px;
+	}
+	.item-slider{
+		width: 342px;
 	}
 	.signup-button{
 		position: relative;
