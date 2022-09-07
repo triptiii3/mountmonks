@@ -116,11 +116,11 @@
         position: relative;
     }
  
-    .card{
-        
-        left: -472px;
-    height: 300px;
-    width: 300px;
+    .card {
+        left: -406px;
+        height: 300px;
+        width: 300px;
+        margin-bottom: 79px;
     }
     .card-front {
         background-color: #fafbfa;
@@ -295,6 +295,11 @@
         overflow-x: hidden;
        
     }
+    .card {
+        left: -465px;
+        height: 300px;
+        width: 300px;
+    }
     .call-button {
         position: relative;
         left: 18px;
@@ -318,7 +323,11 @@
     position: relative;
     }
     #hamburger {
-        left: 333px;
+        left: 356px;
+    }
+    .card-front__text-view--city {
+        color: #ff62b2;
+        font-size: 15px;
     }
     .searchInput {
         width: 20rem;
