@@ -542,10 +542,14 @@ left: 78px;
         top: 7px;
         left: 106px;
 	}
+	#hamburger{
+		position: relative;
+		right:21px ;
+	}
 	.social{
 		position: relative;
-        left: -53px;
-        top: -14px;
+		left: -78px;
+		top: -16px;
     
 	}
 	.signup-button{
