@@ -449,8 +449,13 @@ left: 78px;
 		width: 100%;
 		left: 378px;
 	}
-	#close{
+	#nav.showNav #close {
 		right: 30px;
+		top: -30px;
+		position: relative;
+	}
+	#close{
+		right:-167px ;
 		position: relative;
 	}
 	
