@@ -133,6 +133,12 @@
         height: 300px;
         
     }
+    .back-image{
+        height: 323px;
+        width: 300px;
+        position: relative;
+        top: -21px;
+    }
     .label1{
         left: 13px;
         font-size: 30px;
