@@ -233,7 +233,7 @@
 		height: 55px;
 		width: 169px;
     margin-bottom: 127px;
-    left: 19px;
+    left: -6px;
   
     top: -100px;
 		z-index: 2;
@@ -252,13 +252,13 @@
     padding: 2px 55px;
 	}
 	.weekend{
-		left: 19px;
+		left: -6px;
 		top: -148px;
 	
 	}
 	.backpack{
 		top: -148px;
-		left: 19px;
+		left: 3px;
 	}
 	.custom{
 		left: 3px;
@@ -687,7 +687,7 @@ left: 78px;
 		height: 55px;
 		width: 169px;
     margin-bottom: 127px;
-    left: -4px;
+    left: -19px;
   
     top: -100px;
 		z-index: 2;
@@ -706,13 +706,13 @@ left: 78px;
     padding: 2px 55px;
 	}
 	.weekend{
-		left:4px;
+		left:-15px;
 		top: -148px;
 	
 	}
 	.backpack{
 		top: -148px;
-		left: -4px;
+		left: -15px;
 	}
 	.custom{
 		left: 3px;
@@ -915,6 +915,13 @@ left: 55px;
 	.testimonial-slide{
 		width: 300px;
 	}
+	#nav.showNav .container4 {
+		height: auto;
+		float: left;
+		display: block;
+		width: 100%;
+		left: 5px;
+	}
 	.companiessection{
 		z-index: 2;
 		float: left;
@@ -988,7 +995,7 @@ left: 55px;
 	}
 	.social {
 		position: absolute;
-		left: -67px;
+		left: -46px;
 		top: 12px;
 	}
 	.panda{
