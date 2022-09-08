@@ -36,6 +36,7 @@ urlpatterns = [
     path('contactus', contactus ,name="contactus"),
     path('roadtrips', roadtrips ,name="roadtrips"),
     path('treks', treks ,name="treks"),
+    path('privacy', privacy ,name="privacy"),
     path('bikingtrips', bikingtrips ,name="bikingtrips"),
     path('navigation', navigation ,name="navigation"),
     path('spititours', spititours ,name="spititours"),

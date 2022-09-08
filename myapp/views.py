@@ -200,6 +200,9 @@ def weekendit(request,id):
 def openblog(request):
     
     return render(request, 'openblog.html')
+def privacy(request):
+    
+    return render(request, 'privacy.html')
 def login(request):
     
     return render(request, 'login.html')
