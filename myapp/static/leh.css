@@ -150,7 +150,7 @@ list-style: none;
 .mail{
   color: #ccc;
   position: relative;
- 
+ display: inline-flex;
   text-decoration: none;
 
 }
@@ -912,7 +912,7 @@ p{
 }
 .link-head{
     text-decoration: none;
-    color: #fff;
+    color: #ccc;
     position: relative;
    
     
