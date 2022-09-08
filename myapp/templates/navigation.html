@@ -128,7 +128,7 @@
                       <li>
                         <a href="{% url 'treks'%}" alt="1">Treks</a>
                         <ul class="ddFadeFade">{% for n in trekkingData%}
-                          <li class="dropdown-items item1"><a href="#" alt="1"><img class="nav-img" src="{{1.destination_image.utl}}">
+                          <li class="dropdown-items item1"><a href="#" alt="1"><img class="nav-img" src="{{1.destination_image.url}}">
                             <h2 class="nav-dest">{{1.destination_name}}</h2>
                           <h3 class="nav-price">{{1.destination_price}}</h3></a></li>{%endfor%}
                             <li class="dropdown-items item2"><a href="#" alt="1"><img class="nav-img" src="{% static './images/img2.jpg'%}">
