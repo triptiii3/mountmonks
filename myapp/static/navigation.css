@@ -59,7 +59,7 @@
     float: right;
     right: 41px;
     position: relative;
-    top: -5px;
+    top: -25px;
 z-index: 100;
     
 }
@@ -94,6 +94,8 @@ z-index: 100;
     max-width: 1200px;
     margin: 0 auto;
 	padding-top:13px;
+	left: 20px;
+    position: relative;
 }
 .mmlogo{
 	width: 139px;

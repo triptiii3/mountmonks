@@ -338,13 +338,13 @@
          </h4>
          <ul class="contacts">
             <li class="call">
-                <a href="" class="phone">
-                    <i class="fa fa-phone fa icon"> </i>98111189090
+                <a href="tel:+918595864155" class="phone">
+                    <i class="fa fa-phone fa icon"> 8595864155 </i>
                   </a>
                
             </li>
             <li class="email">
-                <a href="" class="mail">
+                <a href="mailto:Aniket@mountmonks.in" class="mail">
                     <i class="fa fa-envelope fa icon"> </i>mountmonks@gmail.com
                   </a>
                
@@ -378,29 +378,18 @@
          </h4>
          <ul>
            <li class="links" >
-             <a href="" class="link-head">
+             <a href="{% url 'aboutus'%}" class="link-head">
               Our Story
              </a>
    
            </li>
            <li class="links">
-             <a href="" class="link-head">
+             <a href="{% url 'blogs'%}" class="link-head">
               Travel Blogs
              </a>
    
            </li>
-           <li class="links">
-             <a href="" class="link-head">
-               Working with us
-             </a>
-   
-           </li>
-           <li class="links">
-             <a href="" class="link-head">
-               Be our partner
-             </a>
-   
-           </li>
+           
           
          </ul>
    
@@ -411,19 +400,19 @@
          </h4>
          <ul>
            <li class="links">
-             <a href="" class="link-head">
+             <a href="https://wa.me/918595864155" class="link-head">
                Customer Support
              </a>
    
            </li>
            <li class="links">
-             <a href="" class="link-head">
+             <a href="{% url 'privacy'%}"" class="link-head">
               Privacy & Policy
              </a>
    
            </li>
            <li class="links">
-             <a href="" class="link-head">
+             <a href="{% url 'contactus'%}"" class="link-head">
                Contact Channels
              </a>
    
@@ -439,7 +428,7 @@
          <p class="about-us-para">
             The payment is encrypted and transmitted securely with an SSL protocol
          </p>
-         <img src="{% static './images/creditcard-logo.png'%}" class="footerlogo">
+         <img src="{% static './images/razorpay.png'%}" class="footerlogo">
    
        </div>
    

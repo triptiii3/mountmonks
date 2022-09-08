@@ -79,7 +79,7 @@ header{
 .searchInputIcon {
   position: absolute;
   right: 1.8000000000000007rem;
-    top: 1.66rem;
+    top: 17px;
   color: #a1a1a1;
   transition: all 0.1s ease-in-out;
 }
