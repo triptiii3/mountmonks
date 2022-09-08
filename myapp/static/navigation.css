@@ -25,6 +25,12 @@
 .call-icon{
     margin-right: 10px;
 	z-index: 100;
+	color: #fff;
+}
+.email-icon{
+	color: #fff;
+	left: 197px;
+	z-index: 100;
 }
 .mail-button{
     left: 197px;
