@@ -47,8 +47,8 @@
         8595864155
       </a>
     <i class="fa fa-envelope fa email-icon"></i>
-      <a href="mailto:Aniket@mountmonks.in"class="mail-button">
-         </i>mountmonks@gmail.com
+      <a href="mailto:Mountmonksadv@gmail.com"class="mail-button">
+         Mountmonksadv@gmail.com
       </a>
     </div>
     <ul class="social">
@@ -65,7 +65,7 @@
 
       </li>
       <li class="social-icons">
-       <a href="">
+       <a href="www.Instagram.com/Mountmonks">
           <i class="fa fa-instagram  socialicon"></i>
         </a>
 
@@ -127,10 +127,10 @@
                     </li>
                       <li>
                         <a href="{% url 'treks'%}" alt="1">Treks</a>
-                        <ul class="ddFadeFade">
-                          <li class="dropdown-items item1"><a href="#" alt="1"><img class="nav-img" src="{% static './images/img2.jpg'%}">
-                            <h2 class="nav-dest">Solang valley</h2>
-                          <h3 class="nav-price">From 6000/-</h3></a></li>
+                        <ul class="ddFadeFade">{% for n in trekkingData%}
+                          <li class="dropdown-items item1"><a href="#" alt="1"><img class="nav-img" src="{{1.destination_image.utl}}">
+                            <h2 class="nav-dest">{{1.destination-head}}</h2>
+                          <h3 class="nav-price">{{1.destination_price}}</h3></a></li>{%endfor%}
                             <li class="dropdown-items item2"><a href="#" alt="1"><img class="nav-img" src="{% static './images/img2.jpg'%}">
                               <h2 class="nav-dest">Solang valley</h2>
                             <h3 class="nav-price">From 6000/-</h3></a></li>

@@ -928,7 +928,7 @@ footer{
 }
 .link-head{
     text-decoration: none;
-    color: #fff;
+    color: #ccc;
     position: relative;
    
     
@@ -943,7 +943,8 @@ footer{
 .mail{
     color: #ccc;
     position: relative;
-   
+    display: inline-flex;
+
     text-decoration: none;
 
 }
