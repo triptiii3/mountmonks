@@ -6,30 +6,43 @@
     background-color: transparent;
     height: 75px;
 }
-.call-button {
+.call-button{
     left: 50px;
     top: 20px;
     position: relative;
-    z-index: 100;
+	z-index: 100;
+	color: #fff;
+	font-family: 'Montserrat';
+}
+
+.call{
     color: #fff;
-    font-family: 'Montserrat';
+    text-decoration: none;
+    font-family: 'Poppins';
+	z-index: 100;
+    
 }
 .call-icon{
     margin-right: 10px;
 	z-index: 100;
 }
-.mail-button {
-    left: 195px;
+.mail-button{
+    left: 197px;
     top: 19px;
     position: absolute;
     display: inline;
-    z-index: 100;
-    color: #fff;
-    font-family: 'Montserrat';
-	text-decoration: none;
+	z-index: 100;
+	color: #fff;
+	font-family: 'Montserrat';
 }
 
-
+.email{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins';
+	z-index: 100;
+    
+}
 .social{
     text-decoration: none;
     list-style: none;
