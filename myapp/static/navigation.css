@@ -6,31 +6,30 @@
     background-color: transparent;
     height: 75px;
 }
-.call-button{
-    left: 50px;
-    top: 20px;
+.call-button {
+    left: 66px;
+    top: 7px;
     position: relative;
-	z-index: 100;
-	color: #fff;
-	font-family: 'Montserrat';
+    z-index: 100;
+    color: #fff;
+    font-family: 'Montserrat';
 }
 
-.call{
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Poppins';
-	z-index: 100;
-    
-}
-.call-icon{
+
+.call-icon {
     margin-right: 10px;
-	z-index: 100;
-	color: #fff;
+    z-index: 100;
+    color: #fff;
+    position: relative;
+    left: 43px;
+    top: 25px;
 }
-.email-icon{
-	color: #fff;
-	left: 197px;
-	z-index: 100;
+.email-icon {
+    color: #fff;
+    left: 190px;
+    top: -10px;
+    position: relative;
+    z-index: 100;
 }
 .mail-button{
     left: 197px;
@@ -40,6 +39,11 @@
 	z-index: 100;
 	color: #fff;
 	font-family: 'Montserrat';
+}
+.mail-button,
+.call-button:hover{
+	color: #ccc;
+	text-decoration: none;
 }
 
 .email{
