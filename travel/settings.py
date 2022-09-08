@@ -135,7 +135,11 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
-
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID='AKIATHEAAY5K4JGUGS3N'
+AWS_SECRET_ACCESS_KEY='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'
+AWS_STORAGE_BUCKET_NAME='destinationpictures'
+AWS_QUERYSTRING_AUTH=False
 MESSAGE_TAGS ={
     messages.ERROR:'danger'
 }

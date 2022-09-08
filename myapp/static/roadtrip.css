@@ -522,7 +522,11 @@ fieldset {
   
   background-size: cover ;
 }
-
+.nodata{
+  position: relative;
+    left: 389px;
+    top: -172px;
+}
 
 .card-front__tp--ski {
   
