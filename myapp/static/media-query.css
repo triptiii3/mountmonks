@@ -579,9 +579,17 @@ left: 78px;
 		left: -50px;
 	}
 	
-}@media only screen and (max-width:400px) {
+}@media only screen and (max-width:450px) {
 	body{
 		height: max-content;
+	}
+	.call-icon {
+		margin-right: 10px;
+		z-index: 100;
+		color: #fff;
+		position: relative;
+		left: 7px;
+		top: 22px;
 	}
 	*::-webkit-scrollbar {
 		width: 1px;
@@ -982,16 +990,22 @@ left: 55px;
 		left: 100px;
 	}
 	
-	.call-button{
+	.call-button {
 		position: relative;
 		left: 18px;
-        
-    top: 22px;
+		top: 9px;
 	}
-	.mail-button{
+	.email-icon {
+		color: #fff;
+		left: 94px;
+		top: -3px;
 		position: relative;
-        top: 7px;
-        left: 106px;
+		z-index: 100;
+	}
+	.mail-button {
+		position: relative;
+		top: -14px;
+		left: 106px;
 	}
 	.social {
 		position: absolute;
