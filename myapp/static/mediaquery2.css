@@ -104,22 +104,35 @@
 		position: relative;
 		left: 100px;
 	}
-	.call-button{
+	.call-icon {
+		margin-right: 10px;
+		z-index: 100;
+		color: #fff;
+		position: relative;
+		left: 7px;
+		top: 22px;
+	}
+	.call-button {
 		position: relative;
 		left: 18px;
-        
-    top: 22px;
+		top: 9px;
 	}
-	.mail-button{
+	.email-icon {
+		color: #fff;
+		left: 94px;
+		top: -3px;
 		position: relative;
-        top: 7px;
-        left: 106px;
+		z-index: 100;
 	}
-	.social{
+	.mail-button {
 		position: relative;
-        left: -53px;
-        top: -14px;
-    
+		top: -14px;
+		left: 106px;
+	}
+	.social {
+		position: absolute;
+		left: -46px;
+		top: 12px;
 	}
     .nav-link{
 		position: relative;

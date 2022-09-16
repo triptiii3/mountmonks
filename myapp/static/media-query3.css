@@ -201,7 +201,8 @@
 		left: -50px;
 	}
     #hamburger{
-        left: 363px;
+        left: 116px;
+        position: absolute;
     }
     #close{
         left: 356px;
@@ -300,24 +301,37 @@
         height: 300px;
         width: 300px;
     }
-    .call-button {
-        position: relative;
-        left: 18px;
-        top: 22px;
-        font-size: 10px;
-    }
-    .mail-button {
-        position: relative;
-        top: 7px;
-        left: 106px;
-        font-size: 10px;
-    }
-    .social {
-        position: relative;
-        left: -60px;
-        top: -17px;
-        font-size: 10px;
-    }
+    .call-icon {
+		margin-right: 10px;
+		z-index: 100;
+		color: #fff;
+		position: relative;
+		left: 7px;
+		top: 22px;
+	}
+	.call-button {
+		position: relative;
+		left: 18px;
+		top: 9px;
+	}
+	.email-icon {
+		color: #fff;
+		left: 94px;
+		top: -3px;
+		position: relative;
+		z-index: 100;
+	}
+	.mail-button {
+		position: relative;
+		top: -14px;
+		left: 106px;
+	}
+	.social {
+		position: absolute;
+		left: -46px;
+		top: 12px;
+	}
+    
     .card-section{
         left: 53px;
     position: relative;
@@ -345,9 +359,12 @@
         transition: all 0.1s ease-in-out;
     }
     .destination-head {
-        position: relative;
-        top: 159px;
+    
+        top: 187px;
+        left: 40px;
         font-size: 35px;
+        position: relative;
+    
     }
     .related {
         border-radius: 10px;
