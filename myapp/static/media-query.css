@@ -583,14 +583,7 @@ left: 78px;
 	body{
 		height: max-content;
 	}
-	.call-icon {
-		margin-right: 10px;
-		z-index: 100;
-		color: #fff;
-		position: relative;
-		left: 7px;
-		top: 22px;
-	}
+	
 	*::-webkit-scrollbar {
 		width: 1px;
 	  }
@@ -989,7 +982,14 @@ left: 55px;
 		position: relative;
 		left: 100px;
 	}
-	
+	.call-icon {
+		margin-right: 10px;
+		z-index: 100;
+		color: #fff;
+		position: relative;
+		left: 7px;
+		top: 22px;
+	}
 	.call-button {
 		position: relative;
 		left: 18px;

@@ -51,14 +51,13 @@
         height="200px";
         width="200px"
       }>
-      <h3 class="checkoutdest" style="color: #193555; font-family: 'Poppins'; font-size: 40px;position: relative;left: 230px;
-      top: -180px;">{{destination}}</h3> 
+      <h3 class="checkoutdest" >{{destination}}</h3> 
  
       <div class="price">₹<span class="" id="result"> </span>/-</div>
       <div class="details">
-      <h4 style="color:#193555; font-family: 'Poppins'; font-size: 18px; position: relative; left: 230px; top: -170px;" href="#">Price :</h4> <div class="mode">₹<span class="" id="firstNumber">{{mode}} </span>/-</div>
-      <h4 style="color:#193555; font-family: 'Poppins'; font-size: 18px; position: relative; left: 230px; top: -197px;" href="#">Quantity :</h4> <div class="people"><span class="price" id="secondNumber">{{people}} </span></div>
-       <h4 style="color:#193555; font-family: 'Poppins'; font-size: 18px; position: relative; left: 230px; top: -190px;" href="#">Batch :</h4><div class="batch"><span class="price" id="batch">{{batch}} </span></div>
+      <h4 class="pricelabel"  href="#">Price :</h4> <div class="mode">₹<span class="" id="firstNumber">{{mode}} </span>/-</div>
+      <h4 class="quantitylabel" href="#">Quantity :</h4> <div class="people"><span class="price" id="secondNumber">{{people}} </span></div>
+       <h4 class="batchlabel"  href="#">Batch :</h4><div class="batch"><span class="price" id="batch">{{batch}} </span></div>
     </div>
       <hr>
       
@@ -90,7 +89,7 @@
           </div>
 
           <div class="col-50">
-            <h3 style="color: #000; font-family: 'Montserrat'; font-size: 30px;margin-bottom: 30px;"">Payment</h3>
+            <h3 class="payment" style="color: #000; font-family: 'Montserrat'; font-size: 30px;margin-bottom: 30px;"">Payment</h3>
             <label for="fname">Accepted Cards</label>
             <div class="icon-container">
               <i class="fa fa-cc-visa" style="color:navy;"></i>

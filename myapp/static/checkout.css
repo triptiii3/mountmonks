@@ -33,7 +33,19 @@ body{
     flex-wrap: wrap;
     margin: 0 -16px;
   }
-  
+  .checkoutdest{
+    color: #193555; font-family: 'Poppins'; font-size: 40px;position: relative;left: 230px;
+      top: -180px;
+  }
+  .pricelabel{
+    color:#193555; font-family: 'Poppins'; font-size: 18px; position: relative; left: 230px; top: -170px;
+  }
+  .quantitylabel{
+    color:#193555; font-family: 'Poppins'; font-size: 18px; position: relative; left: 230px; top: -197px;
+  }
+  .batchlabel{
+    color:#193555; font-family: 'Poppins'; font-size: 18px; position: relative; left: 230px; top: -190px;
+  }
   .col-25 {
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
@@ -145,11 +157,11 @@ position: relative;
     left: -785px;
     font-size: 18px;
   }
-  #batch{
+  #batch {
     top: -204px;
-    left: -727px;
+    left: -610px;
     font-size: 18px;
-  }
+}
   hr{
     margin-top: -127px;
   }
@@ -162,11 +174,50 @@ position: relative;
       margin-bottom: 20px;
     }
   }
-  @media (max-width: 380px) {
+  @media (max-width: 480px) {
     .row {
       flex-direction: column-reverse;
     }
-    
+    .pricelabel{
+      color: #193555;
+    font-family: 'Poppins';
+    font-size: 18px;
+    position: relative;
+   
+    left: 98px;
+
+    }
+    .mode{
+      top: -97px;
+    left: 155px;
+    }
+    .quantitylabel{
+      top: -91px;
+      left: 96px;
+    }
+    #secondnumber{
+      top: -98px;
+    left: -931px;
+    }
+    .batchlabel{
+      left: 97px;
+      top: -152px;
+      top: -80px;
+    }
+    .batch{
+      top: 90px;
+    left: 698px;
+    }
+    .checkoutdest{
+      font-size: 30px;
+      position: relative;
+      
+      top: -267px;
+    }
+    .price {
+      top: -61px;
+      font-size: 30px;
+      left: 13px;}
     .col-25 {
       margin-bottom: 20px;
       top: -1278px;
