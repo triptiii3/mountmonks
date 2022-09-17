@@ -1008,9 +1008,10 @@ left: 55px;
 		left: 106px;
 	}
 	.social {
-		position: absolute;
-		left: -46px;
-		top: 12px;
+		position: fixed;
+    left: 222px;
+    top: 11px;
+    display: flex;
 	}
 	.panda{
 		width: 342px;

@@ -7,6 +7,9 @@ header{
     position: relative;
 
 }
+.cart{
+ color: #000; font-family: 'Montserrat'; font-size: 40px;margin-bottom: 30px; position: relative ; top: -30px;
+}
 *::-webkit-scrollbar {
     width: 14px;
   }
@@ -234,7 +237,7 @@ position: relative;
   .batch {
     position: relative;
     top: -19px;
-    left: 679px;
+    left: 934px;
 }
 .cart{
   top: -64px;

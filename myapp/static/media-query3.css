@@ -291,7 +291,7 @@
     }
     
 }
-@media only screen and (max-width:450px){
+@media only screen and (max-width:480px){
     body,html{
         overflow-x: hidden;
        
@@ -306,31 +306,32 @@
 		z-index: 100;
 		color: #fff;
 		position: relative;
-		left: 7px;
-		top: 22px;
+		left: 13px;
+    top: -17px;
 	}
 	.call-button {
 		position: relative;
-		left: 18px;
-		top: 9px;
+        left: 26px;
+        top: -7px;
 	}
 	.email-icon {
 		color: #fff;
 		left: 94px;
-		top: -3px;
+		top: 2px;
 		position: relative;
 		z-index: 100;
 	}
 	.mail-button {
 		position: relative;
-		top: -14px;
+        top: 14px;
 		left: 106px;
 	}
 	.social {
-		position: absolute;
-		left: -46px;
-		top: 12px;
-	}
+        position: fixed;
+        left: 197px;
+        top: 8px;
+        display: flex;
+    }
     
     .card-section{
         left: 53px;
