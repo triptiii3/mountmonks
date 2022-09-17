@@ -307,12 +307,12 @@
 		color: #fff;
 		position: relative;
 		left: 13px;
-    top: -17px;
+        top: 27px;
 	}
 	.call-button {
 		position: relative;
         left: 26px;
-        top: -7px;
+        top: 16px;
 	}
 	.email-icon {
 		color: #fff;
@@ -323,7 +323,7 @@
 	}
 	.mail-button {
 		position: relative;
-        top: 14px;
+        top: -10px;
 		left: 106px;
 	}
 	.social {
