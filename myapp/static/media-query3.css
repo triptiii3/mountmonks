@@ -196,6 +196,14 @@
         left: 116px;
         position: absolute;
     }
+    #nav.showNav #hamburger {
+        -webkit-transform: translateX(50px);
+        -moz-transform: translateX(50px);
+        -ms-transform: translateX(50px);
+        -o-transform: translateX(50px);
+        transform: translateX(50px);
+        left: 422px;
+    }
     #close{
         left: 356px;
     }
@@ -328,9 +336,6 @@
         left: 53px;
     position: relative;
     }
-    #hamburger {
-        left: 325px;
-    }
     .card-front__text-view--city {
         color: #ff62b2;
         font-size: 15px;
@@ -370,19 +375,10 @@
 		position: relative;
 		bottom: 126px;
 		position: relative;
-        left: -230px;
+        left: -96px;
         top: 107px;
 	}
-    .people {
-        position: relative;
-        top: -27px;
-        left: 844px;
-    }
-    .batch {
-        position: relative;
-        top: -19px;
-        left: 942px;
-    }
+
     .payment{
         margin-bottom: 60px;
     }
