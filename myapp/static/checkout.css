@@ -184,8 +184,16 @@ position: relative;
   }
   .people {
     position: relative;
-    top: -133px;
-    left: 857px;
+    top: -28px;
+    left: 711px;
+}
+.pricelabel {
+  color: #193555;
+  font-family: 'Poppins';
+  font-size: 18px;
+  position: relative;
+  left: 98px;
+  top: -170px;
 }
 .batchlabel {
   left: 97px;
@@ -209,10 +217,9 @@ position: relative;
       left: -3px;
     }
     .mode {
-      top: -201px;
-      left: 161px;
+      top: -202px;
+      left: 164px;
   }
-  
 
     .price {
       top: -61px;
@@ -224,6 +231,14 @@ position: relative;
       width: 380px;
       position: relative;
   }
+  .batch {
+    position: relative;
+    top: -19px;
+    left: 679px;
+}
+.cart{
+  top: -64px;
+}
   .col-75 {
     -ms-flex: 75%;
     flex: 75%;
